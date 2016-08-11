@@ -136,7 +136,7 @@ jobs:
     type: deploy
     steps:
       - IN: flsv-man8
-      - IN: fl-tripubcluster
+      - IN: flsv-tripubcluster
       - TASK: managed
         deployMethod: upgrade
       
