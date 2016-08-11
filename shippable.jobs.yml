@@ -42,12 +42,12 @@ jobs:
      # - IN: fl-params2
       - IN: flsv-tg3
       
-  - name: flsv-man4entrypoint
-    type: manifest
-    steps:
-      - IN: flsv-img4entrypoint
-      - TASK: managed
-      - IN: flsv-tg4
+  # - name: flsv-man4entrypoint
+  #   type: manifest
+  #   steps:
+  #     - IN: flsv-img4entrypoint
+  #     - TASK: managed
+  #     - IN: flsv-tg4
       
   - name: flsv-man5driftking
     type: manifest
@@ -144,11 +144,11 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
       
-  - name: flsv-tpdeploybg
-    type: deploy
-    steps:
-      - IN: flsv-man4entrypoint
-        switch: off
+  # - name: flsv-tpdeploybg
+  #   type: deploy
+  #   steps:
+  #     - IN: flsv-man4entrypoint
+  #       switch: off
       #- IN: flsv-tripubcluster
       
  # - name: fl-gkedeployup
