@@ -212,6 +212,14 @@ jobs:
       - TASK: managed
       - OUT: flsv-img9
       - IN: flsv-tg4
+      
+  - name: flsv-runCI2
+    type: runCI
+    steps:
+      - IN: flsv-sample-nod-notifiction
+      - TASK: managed
+      - OUT: flsv-img9
+      - IN: flsv-tg3
         
 #rSync
 #  - name: fl-rsyncjob
