@@ -136,7 +136,9 @@ jobs:
     type: deploy
     steps:
       - IN: flsv-man8
-      - IN: flsv-params3
+      - IN: flsv-params4
+        applyTo:
+          flsv-man8
       - IN: flecssv-dopts8
       - IN: flsv-tripubcluster
       - TASK: managed
