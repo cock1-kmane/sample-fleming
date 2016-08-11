@@ -294,7 +294,7 @@ resources:
       params:
         MONGO_API_URL: "localhost:28017"
         #TEST: BETA
-        secure: 0xaYIO/koV4PBZ1CODNdbCrPPZ+CUisaTA73eT8wBZgY/ZKisaK+aJzD9Z0NzFQhBHaxm4OzpyopU10F2AHfZ1tmAPmb+rR6oQ+qq0MbxNhJe7F+qcc+fdfR0u1WV4TBUE3QtzEFT7usVUcpuLUL4pp3kjkf0rH70KI1TijPtdjJjxcqUSlBkEJyLZ2gNNZY91z9MAA2pZKffISsOJryuaJ/H2as+Cq+2UrbI3DcWF/hi1XHz+peCE8LwCCSfpNwKBmuvTjzq72a5wkQoCOESdbgHteJ7R5FeLsOyGAA4xqnl8H+vZ1LtFeEGVgC8njaiEacS703igoaEOgTN8OY9A==
+        secure: k10l7WHxqxHzlsDC8QptqLAb60acxIBt850KCdDD0E92QRIh9DM4dI7ryl/bYFwMHgvCbtaBL9bW8hpVlDaRVaWQP1fHlvG8M2sdfWkQ9bb8/JqcHSnbP5f6SiaUg8bW/q96oMAPVxpbQhkt2TNJTU5ZajBU8hjzQkO1mlkg+LLlumUEbWUNQM9U5nBwkY8s9/nD0RfwI23MHgoq+P7eC2ud0OJaAIV/qrjYuyCn/OBkBtRSyXbkq6zWd9O4Fve1QBlD5ow/gY/qF8nlcpFpWuaIJUxm9A51Tm4JMPn3c3QXTRjKA14AKTrSDyTg62nyw+eHdnqsGtJVblJ2QNwXlg==
         pipelinev2: fleming
 
   #- name: flsv-params2
@@ -314,7 +314,7 @@ resources:
       params:
         MONGO_API_URL: "betahost:75568"
         #TEST: PROD
-        secure: RYxFsomCpf5TvTVt5LOgedQYs+cc7KqW4MEaptIp3W0eI4sxtR9Yw2rJ4ZrUfwcG/P9JrcL16rPOMciwO88ar1XcbR+zhAp7dRbOBh3svCYUKJ+UEwE2yQJjrwyxFD5kpFWou3Zp2rhEcBD52Dqs6rEHCvc3E7WFaayRhy24tg7Bny1ZIzKXqjMcIP3F2XY6vO2mNeyQYoRzL5yr+AD34VIHMwRjFflBsUDJfdAARrT22A74K1yhri0Z74WbSYW1/XiYL+mgwHeasSxYpqci7RmCZEjGEzHTv4VwwXZp2Q50ec5G92FPDUQqTijqQIpv1MQaHRs9oTymL2kXuit17w==
+        secure: iDMBU+V3tBQtjYcswEo1eqS5T0vjHNyFYreSV1GGE5Du2xfG5Vr75nhBtlkBxiLLfECRt2Xs4pr6gy4YyMg7zOd4/ilGgj2jqSRJ4uUjCIwtYl68m0hBa/EamPDLOwduK3vNVxu65h3fHfM8iwxr/OsGh6vhluHdGOaeThFzBwiArzBJU9Jl1UZgI1oxOpESMsIkaRgTXjf+t4Ges0u+HSdwUqVpL+gJF2AmSSV9TIFx3db4sW9JzfzbFAEUd1YX7dT2a4RY+ZE5HzkA4rj1DhCSYP8u7Y+8O45+oAlpoeM3X5YxQCJ1PcnuIpCBxj/yJeXSUicihWlBBioE431/6A==
         pipelinev2: plv2
         
   - name: flsv-params4
@@ -323,10 +323,10 @@ resources:
       params:
         MONGO_API_URL: "prodhost:86755"
         #TEST: PARAM
-        secure: mmvidjaKPrQxQHBYJ/l+jydaKlzBhzF/+AO0R9BAy7pd4+JWsZyOkI/yGjO5mqPnqGqyilMWvqAg8xoLhAc5l/FtXvGhehsmEJLoCTtq4oI9lUyViq+sv9UGrxFczlfANzr/1X2LeB9H4eqP+6E4hpQuzgqW4QrGweTxJIvsNZ0okZRy4QzU6PSslfzgujVlULAWkb+2xUyJOx01dxpMQuc1q/a9qwli4+P785oNTW2DSLeuPuE9m9cEHJ3qmQ5LKbqcq1HeUjiJgyeSe5CoGuhxFQ3Eum2AsdMAZbamkegrohX1awRb3m30RZ9yk1UTaQMSRZpD3/KkVRcS188IzQ==
+        secure: uTBobzhc4kqikvxYRVeZ7h71vSYGRinEnEWFGEnVWjZ05TvXrWjbfBD02vTXdahvuZvNCgioH4dZQeQV9uhT5fJ6hEZ+MRjuxAvWKkq7obA1ZCbXJxsLexgFyHjlPcJbUrAFBzj2MFIHOZrYwWdkokRri75GhbQQBJaZyw1DHfu+IgZ/gRhYnxv5E7HH89DTDtVTfKfesJvIGGTiOWinTgf16taEl4sRQGXR5vh+0Vh0kexkyeIKcbDDG5E6XKYbhQmjOUwsEybLhtoXLVFnDNrJPthpiktq2pzGrH8KIY+ELzx4l3AJxbAwr+hHbeiTTxkrC+5bCiMVmqzk5XdR4g==
         pipelinev2: v2
         #FOO: BAR
-      #  secure: VkbwyD2QHAC0vYeMT76GQP9mJDWpl5R2Dw+Scq/76ECkXwRl/5jaEzYjwgdqfYUdnTB/5J9cqQsshvFDg5I5srzaqqIHxOolxzE8xcndK6mER2oL0/dY7qOEWlPa17/RObyXm6fTRg98iNPUO3eTeYrUOQjcgYnUMYOS/c1+iaHm8wSQQKEW5aUO3BwDKjNJ1w5pS717YYX9Xt9BmPA6UM3EqTXL3PgUui5M2oFrX5d4s10kSjZw189/qxJF+XsZMMy1uCVCt31tRgwvF0kVl8ogJoVqBuSzPg+AmxZR2/LhPX6XE0rZ8zd+7fI445d9CjZ0L2gTGobhw3P1wg/oqA==
+        secure: XwrVACQF9C4b2/rqV7wpHppo1PnZuSs3jdKKlFZ2hKABCRYnN4E4Hk4MA98EBlLOwUX4TzrbFKw0kGJUwdkgmy4FIcIitePlBLuarbCk5i0kc1kEMqhtDd7OVw4P/CNvY9ICrBTBkFhz8X/9oL6cDxLhpKzeO8RE/Flf+e01HfgvTCasph8jGBEV9ij3zYdbUTfakjUtJKQ87lGjCvxsxM8zUeLC/y/Bkxe4rJbO1dPPBK5Fd+K1msDrfuddR2lt8vIJnZRS9qmV2G5oT+g3kPzT+PFTVSEl89ZadqoZEmu3nu21tiJ27E2etTbQqevRdepd12OtZS+oaJOVlMU5FQ==
       
   - name: flsv-scale2
     type: replicas
