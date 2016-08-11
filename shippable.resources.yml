@@ -28,12 +28,12 @@ resources:
       sourceName: "small-cluster" #name of the cluster we are deploying.
       region: "us-east1-d"
       
- # - name: flsv-tripubcluster
-  #  type: cluster
-   # integration: plv2-tripub
-    #pointer:
-     # sourceName: "default" # we can give anything it deploy instances based on region not by cluster name
-      #region: "us-east-2"
+  - name: flsv-tripubcluster
+    type: cluster
+    integration: plv2-tripub
+    pointer:
+      sourceName: "default" # we can give anything it deploy instances based on region not by cluster name
+      region: "us-east-2"
       
 #LOAD BALANCER
   #- name: flsv-lb
