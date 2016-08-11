@@ -354,12 +354,12 @@ resources:
       sourceName: "ci-test2/sample-script"
       branch: "master"
       
-  # - name: flsv-sample-script2
-  #   type: gitRepo
-  #   integration: "github"
-  #   pointer:
-  #     sourceName: "ci-test2/sample-scriptrunsh"
-  #     branch: "master"
+  - name: flsv-sample-script2
+    type: gitRepo
+    integration: "github"
+    pointer:
+      sourceName: "ci-test2/sample-scriptrunsh"
+      branch: "master"
       
  # - name: "flgrsv_sample-fleming_gr-rsync"
   #  type: gitRepo
