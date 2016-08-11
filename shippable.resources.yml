@@ -36,28 +36,28 @@ resources:
       region: "us-east-2"
       
 #LOAD BALANCER
-  #- name: flsv-lb
-   # type: loadBalancer
-    #pointer:
-     # sourceName: v2betatest
+  - name: flsv-lb
+    type: loadBalancer
+    pointer:
+      sourceName: v2betatest
       
 #VERSIONS
 
- # - name: flsv-version
-  #  type: version
-   # seed:
-    #  versionName: "1.2.123-beta"
+  - name: flsv-version
+    type: version
+    seed:
+      versionName: "1.2.123-beta"
       
 #NOTIFICATIONS
       
-  #- name: flsv-slack
-   # type: notification
-    #integration: "plv2-slackcock1"
-    #pointer:
-     # recipients:
-      #  - "#pipeline-pvt"
-       # - "#pipeline-public"
-        #- "@shiphitchcock1"
+  - name: flsv-slack
+    type: notification
+    integration: "plv2-slackcock1"
+    pointer:
+      recipients:
+        - "#pipeline-pvt"
+        - "#pipeline-public"
+        - "@shiphitchcock1"
 
   - name: flsv-email
     type: notification
@@ -174,17 +174,17 @@ resources:
         - "s4"
         - "s5"
         
- # - name: fltpsv-dopts2
-  #  type: dockerOptions
-   # version:
-    #  entryPoint:
-     #   - '/bin/sh'
-      #  - './entrypoint2.sh'
-      #links:
-       # - "plv2-manifest8redis_0_0_055d5014-109c-4c84-9bbe-3009a523972f:testenv"
-      #volumesFrom:
-       #   - "plv2-manifest5entrypointdopt_0_0_03c3505a-a99b-46a9-8fd6-7f4d2516abb5"
-        #  - "basedataContainer:ro"
+  - name: fltpsv-dopts2
+    type: dockerOptions
+    version:
+      entryPoint:
+        - '/bin/sh'
+        - './entrypoint2.sh'
+      links:
+        - "plv2-manifest8redis_0_0_055d5014-109c-4c84-9bbe-3009a523972f:testenv"
+      volumesFrom:
+          - "plv2-manifest5entrypointdopt_0_0_03c3505a-a99b-46a9-8fd6-7f4d2516abb5"
+          - "basedataContainer:ro"
        
   - name: flgkesv-dopts3
     type: dockerOptions
@@ -297,16 +297,16 @@ resources:
         secure: k10l7WHxqxHzlsDC8QptqLAb60acxIBt850KCdDD0E92QRIh9DM4dI7ryl/bYFwMHgvCbtaBL9bW8hpVlDaRVaWQP1fHlvG8M2sdfWkQ9bb8/JqcHSnbP5f6SiaUg8bW/q96oMAPVxpbQhkt2TNJTU5ZajBU8hjzQkO1mlkg+LLlumUEbWUNQM9U5nBwkY8s9/nD0RfwI23MHgoq+P7eC2ud0OJaAIV/qrjYuyCn/OBkBtRSyXbkq6zWd9O4Fve1QBlD5ow/gY/qF8nlcpFpWuaIJUxm9A51Tm4JMPn3c3QXTRjKA14AKTrSDyTg62nyw+eHdnqsGtJVblJ2QNwXlg==
         pipelinev2: fleming
 
-  #- name: flsv-params2
-   # type: params
-    #version:
-     # params:
-      #  DB_HOST: "ds015700.mlab.com"
-       # DB_NAME: "ayeaye"
-        #DB_PORT: "15700"
-        #DB_USERNAME: "aye0aye"
-        #DB_PASSWORD: "aye0aye"
-        #ENVIRONMENT: "test-aws"
+  - name: flsv-params2
+    type: params
+    version:
+      params:
+        DB_HOST: "ds015700.mlab.com"
+        DB_NAME: "ayeaye"
+        DB_PORT: "15700"
+        DB_USERNAME: "aye0aye"
+        DB_PASSWORD: "aye0aye"
+        ENVIRONMENT: "test-aws"
         
   - name: flsv-params3
     type: params
@@ -340,10 +340,10 @@ resources:
       
 #TIME
 
-  #- name: flsv-timeresource
-   # type: time
-    #seed:
-     # interval: "8 8 8 8 *"
+  - name: flsv-timeresource
+    type: time
+    seed:
+      interval: "8 8 8 8 *"
         
 #GITREPO:
 
@@ -354,12 +354,12 @@ resources:
       sourceName: "ci-test2/sample-script"
       branch: "master"
       
-  #- name: flsv-sample-script2
-   # type: gitRepo
-    #integration: "github"
-    #pointer:
-     # sourceName: "ci-test2/sample-scriptrunsh"
-      #branch: "master"
+  - name: flsv-sample-script2
+    type: gitRepo
+    integration: "github"
+    pointer:
+      sourceName: "ci-test2/sample-scriptrunsh"
+      branch: "master"
       
  # - name: "flgrsv_sample-fleming_gr-rsync"
   #  type: gitRepo
