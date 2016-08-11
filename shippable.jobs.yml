@@ -190,7 +190,6 @@ jobs:
       - IN: flsv-man1
       - TASK:
         - script: ls
-        - script: sl
         - script: ./IN/flsv-sample-script1/gitRepo/echo.sh
         - script: sudo apt-get install tree
         - script: tree -F IN
