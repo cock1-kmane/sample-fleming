@@ -196,14 +196,21 @@ jobs:
   #       - script: cat IN/flsv-man1/integration.json
        # - script: export versionName=$(cat ./IN/fl-img1/version.json | jq -r '.version.versionName')
         
-  # - name: flsv-inrunsh2
-  #   type: runSh
-  #   steps:
-  #     - IN: flsv-sample-script2
-  #     - IN: flsv-tg6
-  #     - TASK:
-  #       - script: ls
-        # - script: ./IN/flsv-sample-script2/gitRepo/echo.sh
+  - name: flsv-inrunsh2
+    type: runSh
+    steps:
+      - IN: flsv-sample-script2
+      - IN: flsv-tg6
+      - TASK:
+        - script: ls
+        - script: ./IN/flsv-sample-script2/gitRepo/echo.sh
+        
+  - name: flsv-runCI1
+    type: runCI
+    steps:
+      - IN: flsv-sample-nod-notifiction
+      - TASK: managed
+      - OUT: flsv-img9
         
 #rSync
 #  - name: fl-rsyncjob
@@ -211,3 +218,5 @@ jobs:
   #  steps:
    #   - IN: "flsr_sample-fleming_sr-rsync"
     #  - IN: fl-tg6
+    
+
