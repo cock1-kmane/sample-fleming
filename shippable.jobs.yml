@@ -211,6 +211,7 @@ jobs:
       - IN: flsv-sample-nod-notifiction
       - TASK: managed
       - OUT: flsv-img9
+      - IN: flsv-tg4
         
 #rSync
 #  - name: fl-rsyncjob
