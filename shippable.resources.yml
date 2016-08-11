@@ -293,7 +293,8 @@ resources:
     version:
       params:
         MONGO_API_URL: "localhost:28017"
-        TEST: BETA
+        #TEST: BETA
+        secure: 0xaYIO/koV4PBZ1CODNdbCrPPZ+CUisaTA73eT8wBZgY/ZKisaK+aJzD9Z0NzFQhBHaxm4OzpyopU10F2AHfZ1tmAPmb+rR6oQ+qq0MbxNhJe7F+qcc+fdfR0u1WV4TBUE3QtzEFT7usVUcpuLUL4pp3kjkf0rH70KI1TijPtdjJjxcqUSlBkEJyLZ2gNNZY91z9MAA2pZKffISsOJryuaJ/H2as+Cq+2UrbI3DcWF/hi1XHz+peCE8LwCCSfpNwKBmuvTjzq72a5wkQoCOESdbgHteJ7R5FeLsOyGAA4xqnl8H+vZ1LtFeEGVgC8njaiEacS703igoaEOgTN8OY9A==
         pipelinev2: fleming
 
   #- name: flsv-params2
@@ -312,7 +313,8 @@ resources:
     version:
       params:
         MONGO_API_URL: "betahost:75568"
-        TEST: PROD
+        #TEST: PROD
+        secure: RYxFsomCpf5TvTVt5LOgedQYs+cc7KqW4MEaptIp3W0eI4sxtR9Yw2rJ4ZrUfwcG/P9JrcL16rPOMciwO88ar1XcbR+zhAp7dRbOBh3svCYUKJ+UEwE2yQJjrwyxFD5kpFWou3Zp2rhEcBD52Dqs6rEHCvc3E7WFaayRhy24tg7Bny1ZIzKXqjMcIP3F2XY6vO2mNeyQYoRzL5yr+AD34VIHMwRjFflBsUDJfdAARrT22A74K1yhri0Z74WbSYW1/XiYL+mgwHeasSxYpqci7RmCZEjGEzHTv4VwwXZp2Q50ec5G92FPDUQqTijqQIpv1MQaHRs9oTymL2kXuit17w==
         pipelinev2: plv2
         
   - name: flsv-params4
@@ -320,7 +322,8 @@ resources:
     version:
       params:
         MONGO_API_URL: "prodhost:86755"
-        TEST: PARAM
+        #TEST: PARAM
+        secure: mmvidjaKPrQxQHBYJ/l+jydaKlzBhzF/+AO0R9BAy7pd4+JWsZyOkI/yGjO5mqPnqGqyilMWvqAg8xoLhAc5l/FtXvGhehsmEJLoCTtq4oI9lUyViq+sv9UGrxFczlfANzr/1X2LeB9H4eqP+6E4hpQuzgqW4QrGweTxJIvsNZ0okZRy4QzU6PSslfzgujVlULAWkb+2xUyJOx01dxpMQuc1q/a9qwli4+P785oNTW2DSLeuPuE9m9cEHJ3qmQ5LKbqcq1HeUjiJgyeSe5CoGuhxFQ3Eum2AsdMAZbamkegrohX1awRb3m30RZ9yk1UTaQMSRZpD3/KkVRcS188IzQ==
         pipelinev2: v2
       
   - name: flsv-scale2
