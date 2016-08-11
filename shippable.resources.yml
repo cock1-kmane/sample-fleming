@@ -325,6 +325,8 @@ resources:
         #TEST: PARAM
         secure: mmvidjaKPrQxQHBYJ/l+jydaKlzBhzF/+AO0R9BAy7pd4+JWsZyOkI/yGjO5mqPnqGqyilMWvqAg8xoLhAc5l/FtXvGhehsmEJLoCTtq4oI9lUyViq+sv9UGrxFczlfANzr/1X2LeB9H4eqP+6E4hpQuzgqW4QrGweTxJIvsNZ0okZRy4QzU6PSslfzgujVlULAWkb+2xUyJOx01dxpMQuc1q/a9qwli4+P785oNTW2DSLeuPuE9m9cEHJ3qmQ5LKbqcq1HeUjiJgyeSe5CoGuhxFQ3Eum2AsdMAZbamkegrohX1awRb3m30RZ9yk1UTaQMSRZpD3/KkVRcS188IzQ==
         pipelinev2: v2
+        #FOO: BAR
+        secure: VkbwyD2QHAC0vYeMT76GQP9mJDWpl5R2Dw+Scq/76ECkXwRl/5jaEzYjwgdqfYUdnTB/5J9cqQsshvFDg5I5srzaqqIHxOolxzE8xcndK6mER2oL0/dY7qOEWlPa17/RObyXm6fTRg98iNPUO3eTeYrUOQjcgYnUMYOS/c1+iaHm8wSQQKEW5aUO3BwDKjNJ1w5pS717YYX9Xt9BmPA6UM3EqTXL3PgUui5M2oFrX5d4s10kSjZw189/qxJF+XsZMMy1uCVCt31tRgwvF0kVl8ogJoVqBuSzPg+AmxZR2/LhPX6XE0rZ8zd+7fI445d9CjZ0L2gTGobhw3P1wg/oqA==
       
   - name: flsv-scale2
     type: replicas
