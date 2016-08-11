@@ -2,17 +2,17 @@ jobs:
 
 #RELEASE
 
-  - name: flsv-release
-    type: release
-    steps:
-      - IN: flsv-version
-        versionName: testrelease
-      - TASK: managed
-        bump: beta
-      - IN: flsv-man1
-      - IN: flsv-tg6
-    flags:
-      - flsv-release
+  # - name: flsv-release
+  #   type: release
+  #   steps:
+  #     - IN: flsv-version
+  #       versionName: testrelease
+  #     - TASK: managed
+  #       bump: beta
+  #     - IN: flsv-man1
+  #     - IN: flsv-tg6
+  #   flags:
+  #     - flsv-release
       
 #MANIFESTS
       
@@ -34,13 +34,13 @@ jobs:
         #  - flsv-img2
       - IN: flsv-tg2
       
-  - name: flsv-man3env
-    type: manifest
-    steps:
-      - IN: flsv-img3env
-     # - IN: flsv-params1
-     # - IN: fl-params2
-      - IN: flsv-tg3
+  # - name: flsv-man3env
+  #   type: manifest
+  #   steps:
+  #     - IN: flsv-img3env
+  #   # - IN: flsv-params1
+  #   # - IN: fl-params2
+  #     - IN: flsv-tg3
       
   # - name: flsv-man4entrypoint
   #   type: manifest
@@ -115,12 +115,12 @@ jobs:
      # - TASK: managed
        # deployMethod: upgrade
         
-  - name: flsv-ecsdeploybginvalid
-    type: deploy
-    steps:
-      - IN: flsv-man5driftking
-      - IN: flsv-dopts6invalid
-      - IN: flsv-ecscluster
+  # - name: flsv-ecsdeploybginvalid
+  #   type: deploy
+  #   steps:
+  #     - IN: flsv-man5driftking
+  #     - IN: flsv-dopts6invalid
+  #     - IN: flsv-ecscluster
      # - TASK: managed
        # deployMethod: upgrade
       
@@ -180,20 +180,20 @@ jobs:
     #  - IN: fl-ddccluster
       
 #runSh
-  - name: flsv-inrunsh
-    type: runSh
-    steps:
-      - IN: flsv-sample-script1
-        #versionName: "149dc247602ba40192703b5fe0a1bfae01bd8490"
-      - IN: flsv-tg6
-      - IN: flsv-img1
-      - IN: flsv-man1
-      - TASK:
-        - script: ls
-        - script: ./IN/flsv-sample-script1/gitRepo/echo.sh
-        - script: sudo apt-get install tree
-        - script: tree -F IN
-        - script: cat IN/flsv-man1/integration.json
+  # - name: flsv-inrunsh
+  #   type: runSh
+  #   steps:
+  #     - IN: flsv-sample-script1
+  #       #versionName: "149dc247602ba40192703b5fe0a1bfae01bd8490"
+  #     - IN: flsv-tg6
+  #     - IN: flsv-img1
+  #     - IN: flsv-man1
+  #     - TASK:
+  #       - script: ls
+  #       - script: ./IN/flsv-sample-script1/gitRepo/echo.sh
+  #       - script: sudo apt-get install tree
+  #       - script: tree -F IN
+  #       - script: cat IN/flsv-man1/integration.json
        # - script: export versionName=$(cat ./IN/fl-img1/version.json | jq -r '.version.versionName')
         
   # - name: flsv-inrunsh2
