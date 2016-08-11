@@ -361,6 +361,13 @@ resources:
       sourceName: "ci-test2/sample-scriptrunsh"
       branch: "master"
       
+  - name: flsv-sample-nod-notifiction
+    type: gitRepo
+    integration: "github"
+    pointer:
+      sourceName: "ci-test2/sample_nod_notifications"
+      branch: "master"
+      
  # - name: "flgrsv_sample-fleming_gr-rsync"
   #  type: gitRepo
    # integration: "github"
