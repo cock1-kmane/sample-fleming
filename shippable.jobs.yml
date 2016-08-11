@@ -74,6 +74,8 @@ jobs:
     type: manifest
     steps:
       - IN: flsv-img9
+      - IN: flecssv-dopts7
+      - IN: flsv-params1
       - IN: flsv-tg8
       
   - name: flsv-man9
@@ -90,13 +92,13 @@ jobs:
 
 # DEPLOYMENTS 
 
- # - name: flsv-ecsdeployup
-  #  type: deploy
-   # steps:
-    #  - IN: flsv-man10deployall
-     # - IN: flsv-ecscluster
-      #- TASK: managed
-       # deployMethod: upgrade
+  - name: flsv-ecsdeployup
+    type: deploy
+    steps:
+      - IN: flsv-man8
+      - IN: flsv-ecscluster
+      - TASK: managed
+        deployMethod: upgrade
       
   #- name: flsv-ecsdeploybg
    # type: deploy
