@@ -4,7 +4,7 @@ resources:
 
   - name: flsv-ddccluster
     type: cluster
-    integration: plv2-ddctest
+    integration: plv2-ddc
     pointer:
       sourceName : "nothing" #we can anything because it is mandatory but ddc doesnot have clusters
 
@@ -333,9 +333,8 @@ resources:
     version:
       params:
         MONGO_API_URL: "prodhost:89834"
-        #TEST: PARAM
-        #secure: uTBobzhc4kqikvxYRVeZ7h71vSYGRinEnEWFGEnVWjZ05TvXrWjbfBD02vTXdahvuZvNCgioH4dZQeQV9uhT5fJ6hEZ+MRjuxAvWKkq7obA1ZCbXJxsLexgFyHjlPcJbUrAFBzj2MFIHOZrYwWdkokRri75GhbQQBJaZyw1DHfu+IgZ/gRhYnxv5E7HH89DTDtVTfKfesJvIGGTiOWinTgf16taEl4sRQGXR5vh+0Vh0kexkyeIKcbDDG5E6XKYbhQmjOUwsEybLhtoXLVFnDNrJPthpiktq2pzGrH8KIY+ELzx4l3AJxbAwr+hHbeiTTxkrC+5bCiMVmqzk5XdR4g==
-        pipelinev2: aug25
+       # pipelinev2: aug25
+        secure: wTaChuoMBHtCjkQozxzP0AaQ1q2yQMFGkwsdnjknD/8nlcxr3L7q4CLFaRtJH8/j6g4gzw1z1fkii5FEOzY7Ch2J7lPuqd0yrOYUMiA+lZ+vH30xDw3OzKzxrfsW8YfyTGyTdnS+wFRP+bjuPOl3HqR8C45A4abzZq2ClL3metxTJnF+7F6K+1XtaUyW24OKq8rkl/R817fk5UA4eHc5rgUZxeB6ljGl2RzImNFD5twEAla+t1PgqgGmZ/sfkL579pTYSvj7TWKGFrkApM3PpvGrgDJAvdcDrnhf+ESF3XC2nXtDRb7gfxN01arVZYw/hew452LWBqa+cqlUrMHyNA==
         
   # - name: flsv-scale2
   #   type: replicas
