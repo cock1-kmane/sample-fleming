@@ -132,17 +132,17 @@ jobs:
      # - TASK: managed
       #  deployMethod: upgrade
       
-  - name: fl-tpdeployup
-    type: deploy
-    steps:
-      - IN: flsv-man8
-      - IN: flsv-params5
-        applyTo:
-          flsv-man8
-      - IN: flecssv-dopts8
-      - IN: flsv-tripubcluster
-      - TASK: managed
-        deployMethod: upgrade
+  # - name: fl-tpdeployup
+  #   type: deploy
+  #   steps:
+  #     - IN: flsv-man8
+  #     - IN: flsv-params5
+  #       applyTo:
+  #         flsv-man8
+  #     - IN: flecssv-dopts8
+  #     - IN: flsv-tripubcluster
+  #     - TASK: managed
+  #       deployMethod: upgrade
       
   # - name: flsv-tpdeploybg
   #   type: deploy
@@ -205,13 +205,13 @@ jobs:
         - script: ls
         - script: ./IN/flsv-sample-script2/gitRepo/echo.sh
         
-  - name: flsv-runCI1
-    type: runCI
-    steps:
-      - IN: flsv-sample-nod-notifiction
-      - TASK: managed
-      - OUT: flsv-img9
-      - IN: flsv-tg4
+#  - name: flsv-runCI1
+ #   type: runCI
+  #  steps:
+   #   - IN: flsv-sample-nod-notifiction
+    #  - TASK: managed
+     # - OUT: flsv-img9
+      #- IN: flsv-tg4
       
   #- name: flsv-runCI2
    # type: runCI
