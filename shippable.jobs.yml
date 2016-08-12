@@ -92,13 +92,14 @@ jobs:
 
 # DEPLOYMENTS 
 
- # - name: flsv-ecsdeployup
-  #  type: deploy
-   # steps:
-    #  - IN: flsv-man8
-     # - IN: flsv-ecscluster
-      #- TASK: managed
-       # deployMethod: upgrade
+  - name: flsv-ecsdeployup
+    type: deploy
+    steps:
+      - IN: flsv-man10deployall
+      - IN: flsv-dopts6invalid
+      - IN: flsv-ecscluster
+      - TASK: managed
+        deployMethod: upgrade
       
   #- name: flsv-ecsdeploybg
    # type: deploy
