@@ -200,17 +200,20 @@ jobs:
   - name: flsv-inrunsh3
     type: runSh
     steps:
-      - IN: flsv-sample-script2
+      - IN: flsv-sample-script1
       - IN: flsv-man1
       - IN: flsv-tg6
       - TASK:
         - script: ls
-        - script: ./IN/flsv-sample-script2/gitRepo/echo.sh
+        - script: ./IN/flsv-sample-script1/gitRepo/echo.sh
         - script: sl
         - script: sudo apt-get install tree
         - script: tree -F IN
         - script: cat IN/flsv-man1/integration.json
-        
+    on_failure:
+      - script: echo 'testing1 failure'
+      - script: echo 'failure runSh'
+      - NOTIFY: slack-rs
         
 #  - name: flsv-runCI1
  #   type: runCI
