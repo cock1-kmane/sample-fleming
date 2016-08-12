@@ -96,7 +96,7 @@ jobs:
     type: deploy
     steps:
       - IN: flsv-man10deployall
-      - IN: flsv-dopts6invalid
+      #- IN: flsv-dopts6invalid
       - IN: flsv-ecscluster
       - TASK: managed
         deployMethod: upgrade
