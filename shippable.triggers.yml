@@ -52,4 +52,4 @@ triggers:
    - name: flsv-tg11
      type: trigger
      version:
-       counter: 0
+       counter: 1
