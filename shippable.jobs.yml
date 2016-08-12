@@ -67,8 +67,8 @@ jobs:
     type: manifest
     steps:
       - IN: flsv-img1
-     # - IN: flsv-dopts6invalid
-      - IN: flsv-tg7
+      - IN: flsv-dopts6invalid
+      - IN: flsv-tg70
       
   - name: flsv-man8
     type: manifest
