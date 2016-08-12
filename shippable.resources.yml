@@ -143,6 +143,14 @@ resources:
     seed:
       versionName: "deploy.3"
       
+  - name: flsv-img10webhook
+    type: image
+    integration: plv2-docker
+    pointer:
+      sourceName: "shiphitchcock1/sample_node"
+    seed:
+      versionName: "latest"
+      
 # DOCKER OPTIONS:
   
   - name: fltpsv-dopts1
