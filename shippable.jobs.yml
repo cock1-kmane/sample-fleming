@@ -213,7 +213,7 @@ jobs:
     on_failure:
       - script: echo 'testing1 failure'
       - script: echo 'failure runSh'
-      - NOTIFY: slack-rs
+      - NOTIFY: flsv-slack
         
 #  - name: flsv-runCI1
  #   type: runCI
