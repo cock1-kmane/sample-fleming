@@ -89,6 +89,12 @@ jobs:
     steps:
       - IN: flsv-img8
       - IN: flsv-tg10
+      
+  - name: flsv-man11webhook
+    type: manifest
+    steps:
+      - IN: flsv-img10webhook
+      - IN: flsv-tg12
 
 # DEPLOYMENTS 
 
