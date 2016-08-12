@@ -200,10 +200,16 @@ jobs:
     type: runSh
     steps:
       - IN: flsv-sample-script2
+      - IN: flsv-man1
       - IN: flsv-tg6
       - TASK:
         - script: ls
         - script: ./IN/flsv-sample-script2/gitRepo/echo.sh
+        - script: sl
+        - script: sudo apt-get install tree
+        - script: tree -F IN
+        - script: cat IN/flsv-man1/integration.json
+        
         
 #  - name: flsv-runCI1
  #   type: runCI
