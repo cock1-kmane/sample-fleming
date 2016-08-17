@@ -165,7 +165,7 @@ resources:
   - name: flsv-loadb1
     type: loadBalancer
     pointer:
-     # sourceName: EC2Contai-EcsElast-17A64D22JHQLM
+      sourceName: #EC2Contai-EcsElast-17A64D22JHQLM
       
 # DOCKER OPTIONS:
   
