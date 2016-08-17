@@ -46,7 +46,7 @@ resources:
   - name: flsv-version
     type: version
     seed:
-    #  versionName: "1.2.123-beta"
+      versionName: "1.2.123-beta"
       
 #INTEGRATION
   - name: flsv-ecsint
@@ -165,7 +165,7 @@ resources:
   - name: flsv-loadb1
     type: loadBalancer
     pointer:
-      sourceName: #EC2Contai-EcsElast-17A64D22JHQLM
+      sourceName: EC2Contai-EcsElast-17A64D22JHQLM
       
 # DOCKER OPTIONS:
   
@@ -407,9 +407,9 @@ resources:
      # sourceName: "ci-test2/sample-fleming"
       #branch: "gitrepo"
       
-  #- name: "flsrsv_sample-fleming_sr-rsync" # throws error in rSync job if we have syncRepo resource-> expected
-   # type: syncRepo
-    #integration: "github"
-    #pointer:
-     # sourceName: "ci-test2/sample-fleming"
-      #branch: "syncrepo"
+  - name: "flsrsv_sample-fleming_sr-rsync" # throws error in rSync job if we have syncRepo resource-> expected
+    type: syncRepo
+    integration: "github"
+    pointer:
+      sourceName: "ci-test2/sample-fleming"
+      branch: "syncrepo"
