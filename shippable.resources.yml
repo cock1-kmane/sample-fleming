@@ -61,12 +61,12 @@ resources:
 
   - name: flsv-email
     type: notification
-    integration: "plv2-emailcock1"
+   # integration: "plv2-emailcock1"
     pointer:
       method: email
       recipients: 
         - "varsha@shippable.com"
-        #- "shiphitchcock1@gmail.com"
+        - "shiphitchcock1@gmail.com"
         
 #IMAGES
         
