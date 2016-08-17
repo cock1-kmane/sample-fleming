@@ -49,19 +49,19 @@ jobs:
   #     - TASK: managed
   #     - IN: flsv-tg4
       
-  - name: flsv-man5driftking
-    type: manifest
-    steps:
-      - IN: flsv-img5workingdir
-      - IN: flsv-tg5
-      - TASK: managed
+  # - name: flsv-man5driftking
+  #   type: manifest
+  #   steps:
+  #     - IN: flsv-img5workingdir
+  #     - IN: flsv-tg5
+  #     - TASK: managed
   
-  - name: flsv-man6redismftomf
-    type: manifest
-    steps:
-      - IN: flsv-img6redis
-      - IN: flsv-man1
-        switch: off
+  # - name: flsv-man6redismftomf
+  #   type: manifest
+  #   steps:
+  #     - IN: flsv-img6redis
+  #     - IN: flsv-man1
+  #       switch: off
       
   - name: flsv-man7invalid
     type: manifest
