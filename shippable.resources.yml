@@ -301,8 +301,8 @@ resources:
   - name: flecssv-dopts9
     type: dockerOptions
     version:
-      memory:# 300
-    #  cpuShares: 4
+      memory: 300
+      cpuShares: 4
         
 #PARAMS
 
@@ -384,7 +384,7 @@ resources:
     type: gitRepo
     integration: "github"
     pointer:
-      sourceName: "ci-test2/sample-scriptrunsh"
+     # sourceName: "ci-test2/sample-scriptrunsh"
       branch: "master"
       
   - name: flsv-sample-nod-notifiction
