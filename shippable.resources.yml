@@ -52,6 +52,10 @@ resources:
   - name: flsv-ecsint
     type: integration
     integration: plv2-ecs
+    
+  - name: flsv-ecsint
+    type: integration
+    integration: plv2-docker
       
 #NOTIFICATIONS
       
