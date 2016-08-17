@@ -298,10 +298,10 @@ jobs:
       #- IN: flsv-tg3
         
 #rSync
-  - name: flsv-rsyncjob
-    type: rSync
-    steps:
-      - IN: "flsrsv_sample-fleming_sr-rsync"
-      - IN: fl-tg6
+  # - name: flsv-rsyncjob
+  #   type: rSync
+  #   steps:
+  #     - IN: "flsrsv_sample-fleming_sr-rsync"
+  #     - IN: fl-tg6
     
 
