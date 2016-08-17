@@ -34,33 +34,33 @@ jobs:
         #  - fl-img2
      # - IN: fl-tg2
       
-  - name: fl-man3env
-    type: manifest
-    steps:
-      - IN: fl-img3env
-      - IN: fl-params1
-     # - IN: fl-params2
-      - IN: fl-tg3
+  # - name: fl-man3env
+  #   type: manifest
+  #   steps:
+  #     - IN: fl-img3env
+  #     - IN: fl-params1
+  #   # - IN: fl-params2
+  #     - IN: fl-tg3
       
-  - name: fl-man4entrypoint
-    type: manifest
-    steps:
-      - IN: fl-img4entrypoint
-      - TASK: managed
-      - IN: fl-tg4
+  # - name: fl-man4entrypoint
+  #   type: manifest
+  #   steps:
+  #     - IN: fl-img4entrypoint
+  #     - TASK: managed
+  #     - IN: fl-tg4
       
-  - name: fl-man5driftking
-    type: manifest
-    steps:
-      - IN: fl-img5workingdir
-      - IN: fl-tg5
-      - TASK: managed
+  # - name: fl-man5driftking
+  #   type: manifest
+  #   steps:
+  #     - IN: fl-img5workingdir
+  #     - IN: fl-tg5
+  #     - TASK: managed
   
-  - name: fl-man6redismftomf
-    type: manifest
-    steps:
-      - IN: fl-img6redis
-      - IN: fl-man1
+  # - name: fl-man6redismftomf
+  #   type: manifest
+  #   steps:
+  #     - IN: fl-img6redis
+  #     - IN: fl-man1
         switch: off
       
   - name: fl-man7invalid
