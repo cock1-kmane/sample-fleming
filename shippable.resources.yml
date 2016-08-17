@@ -50,8 +50,8 @@ resources:
       
   - name: flsv-version2
     type: version
-    seed:
-      versionName: "10.12.123-beta"
+    # seed:
+    #   versionName: "10.12.123-beta"
       
 #INTEGRATION
   - name: flsv-ecsint
