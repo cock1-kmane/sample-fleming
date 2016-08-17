@@ -112,6 +112,14 @@ jobs:
       - IN: flsv-ecscluster
       - TASK: managed
         deployMethod: upgrade
+        
+  - name: flsv-ecsdeployup2
+    type: deploy
+    steps:
+      - IN: flsv-man1
+      - IN: flsv-ecscluster
+      - TASK: managed
+        deployMethod: upgrade
       
   #- name: flsv-ecsdeploybg
    # type: deploy
