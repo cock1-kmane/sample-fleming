@@ -77,7 +77,12 @@ jobs:
       - IN: flecssv-dopts7
       - IN: flsv-params1
       - IN: flsv-tg8
-      
+    on_start:
+      - NOTIFY: flsv-email
+    on_success:
+      - NOTIFY: flsv-email
+      - NOTIFY: flsv-slack
+
   - name: flsv-man9
     type: manifest
     steps:
@@ -106,6 +111,11 @@ jobs:
       - IN: flsv-ecscluster
       - TASK: managed
         deployMethod: upgrade
+    on_start:
+      - NOTIFY: flsv-email
+    on_success:
+      - NOTIFY: flsv-email
+      - NOTIFY: flsv-slack
       
   #- name: flsv-ecsdeploybg
    # type: deploy
