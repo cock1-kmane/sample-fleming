@@ -1,19 +1,5 @@
 resources:
 
-#CLUSTERS
-
-  - name: flsv-ddccluster
-    type: cluster
-    integration: plv2-ddctest
-    pointer:
-      sourceName : "nothing" #we can anything because it is mandatory but ddc doesnot have clusters
-
-  # - name: flsv-dclcluster
-  #   type: cluster
-  #   integration: plv2-dcl
-  #   pointer:
-  #   sourceName : "cluster-dcl"
-
   - name: flsv-ecscluster
     type: cluster
     integration: plv2-ecs
@@ -21,25 +7,12 @@ resources:
       sourceName : "testCL"
       region: "us-west-2"
       
-  # - name: flsv-gkecluster
-  #   type: cluster
-  #   integration: plv2-gke
-  #   pointer:
-  #     sourceName: "small-cluster" #name of the cluster we are deploying.
-  #     region: "us-east1-d"
-      
-  - name: flsv-tripubcluster
-    type: cluster
-    integration: plv2-tripub
-    pointer:
-      sourceName: "default" # we can give anything it deploy instances based on region not by cluster name
-      region: "us-east-2"
-      
+
 #LOAD BALANCER
-  # - name: flsv-lb
-  #   type: loadBalancer
-  #   pointer:
-  #     sourceName: v2betatest
+  - name: flsv-lb
+    type: loadBalancer
+    pointer:
+      sourceName: v2betatest
       
 #VERSIONS
 
@@ -59,13 +32,13 @@ resources:
         - "#pipeline-public"
         - "@shiphitchcock1"
 
-  # - name: flsv-email
-  #   type: notification
-  #   integration: "plv2-emailcock1"
-  #   pointer:
-  #     recipients: 
-  #       - "varsha@shippable.com"
-  #       - "shiphitchcock1@gmail.com"
+  - name: flsv-email
+    type: notification
+    pointer:
+      method: email
+      recipients:
+        - "varsha@shippable.com"
+       # - "shiphitchcock1@gmail.com"
         
 #IMAGES
         
@@ -81,7 +54,7 @@ resources:
     type: image
     integration: plv2-docker
     pointer:
-      sourceName: "shiphitchcock1/betaci_nod_limitless_p"
+      sourceName: "shiphitchcock1/betaci_nod_limitless_pl"
     seed:
       versionName: "deploy.5"
       
@@ -93,94 +66,36 @@ resources:
     seed:
       versionName: "nodeenv"
       
-  # - name: flsv-img4entrypoint
-  #   type: image
-  #   integration: plv2-docker
-  #   pointer:
-  #     sourceName: "scriptnull/debian"
-  #   seed:
-  #     versionName: "entrypoint"
-  
-  - name: flsv-img5workingdir
-    type: image
-    integration: plv2-docker
-    pointer:
-      sourceName: "scriptnull/debian"
-    seed:
-      versionName: "driftking"
-    flags: #this for UI SPOG page there is filters 
-      - fl-img5workingdir
-      
-  - name: flsv-img6redis
-    type: image
-    integration: plv2-docker
-    pointer:
-      sourceName: "redis"
-    seed:
-      versionName: "latest"
-      
-  - name: flsv-img7invalid
-    type: image
-    integration: plv2-docker
-    pointer:
-      sourceName: "shippabledocker/pipelinev2test"
-    seed:
-      versionName: "deploy123"   
-      
-  - name: flsv-img8
-    type: image
-    integration: plv2-docker
-    pointer:
-      sourceName: "shippabledocker/pipelinev2"
-    seed:
-      versionName: "deploy.2"
-      
-  - name: flsv-img9
-    type: image
-    integration: plv2-docker
-    pointer:
-      sourceName: "shippabledocker/pipelinev2"
-    seed:
-      versionName: "deploy.3"
-      
-  - name: flsv-img10webhook
-    type: image
-    integration: plv2-docker
-    pointer:
-      sourceName: "shiphitchcock1/sample_node"
-    seed:
-      versionName: "latest"
-      
 # DOCKER OPTIONS:
   
-  - name: fltpsv-dopts1
-    type: dockerOptions
-    version:
-      memory: 128
-      user: "driftking"
-      workingDir: "/makemeworking"
-      publishAllPorts: true
-      cmd:
-        - "node"
-        - "job.js"
-      dnsServers:
-        - "127.0.8.1"
-      dnsSearch:
-        - "127.8.0.1"
-      logConfig:
-        type: "json-file"
-        options:
-          max-size: 50m
-      privileged: true
-      labels:
-        labelone: valueOne
-        labeltwo: valueTwo
-      volumes:
-        - "s1"
-        - "s2"
-        - "s3"
-        - "s4"
-        - "s5"
+  # - name: fltpsv-dopts1
+  #   type: dockerOptions
+  #   version:
+  #     memory: 128
+  #     user: "driftking"
+  #     workingDir: "/makemeworking"
+  #     publishAllPorts: true
+  #     cmd:
+  #       - "node"
+  #       - "job.js"
+  #     dnsServers:
+  #       - "127.0.8.1"
+  #     dnsSearch:
+  #       - "127.8.0.1"
+  #     logConfig:
+  #       type: "json-file"
+  #       options:
+  #         max-size: 50m
+  #     privileged: true
+  #     labels:
+  #       labelone: valueOne
+  #       labeltwo: valueTwo
+  #     volumes:
+  #       - "s1"
+  #       - "s2"
+  #       - "s3"
+  #       - "s4"
+  #       - "s5"
         
   # - name: fltpsv-dopts2
   #   type: dockerOptions
@@ -194,64 +109,64 @@ resources:
   #         - "plv2-manifest5entrypointdopt_0_0_03c3505a-a99b-46a9-8fd6-7f4d2516abb5"
   #         - "basedataContainer:ro"
        
-  - name: flgkesv-dopts3
-    type: dockerOptions
-    version:
-      memory: 64
-      cpuShares: 2
-      entryPoint:
-        - "mongod"
-      workingDir: "/home/test"
-      cmd:
-        - "pwd"
-        - "true"
-      privileged: false
-      user: 0
-      volumes:
-        - "/host/path.2:/container/path:rw"
-        - "/host/path:/container/path2:rw"
-       # - "/host/path2:/container/path3:ro"
-        - "/host/path..2:/container/path4:rw"
-        - "/host/path..3:/container/path5:ro"
-        - "/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz:/container/path6:ro"
-      labels:
-        labelone: valueOne
-        labeltwo: valueTwo
+  # - name: flgkesv-dopts3
+  #   type: dockerOptions
+  #   version:
+  #     memory: 64
+  #     cpuShares: 2
+  #     entryPoint:
+  #       - "mongod"
+  #     workingDir: "/home/test"
+  #     cmd:
+  #       - "pwd"
+  #       - "true"
+  #     privileged: false
+  #     user: 0
+  #     volumes:
+  #       - "/host/path.2:/container/path:rw"
+  #       - "/host/path:/container/path2:rw"
+  #     # - "/host/path2:/container/path3:ro"
+  #       - "/host/path..2:/container/path4:rw"
+  #       - "/host/path..3:/container/path5:ro"
+  #       - "/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz:/container/path6:ro"
+  #     labels:
+  #       labelone: valueOne
+  #       labeltwo: valueTwo
         
-  - name: flecssv-dopts4
-    type: dockerOptions
-    version:
-      memory: 48
-      cpuShares: 2
-      privileged: false
-      volumes:
-      #  - "/host/path.2:/container/path:rw"
-       # - "/host/path:/container/path2:rw"
-        - "/host/path2:/container/path3:ro"
-        - "/host/path..2:/container/path4:rw"
-        - "/host/path..3:/container/path5:ro"
-        - "/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz:/container/path6:ro"
-      dnsServers:
-        - "127.0.0.1"
-        - "8.8.8.8"
-      dnsSearch:
-        - "127.0.0.1"
-        - "8.8.8.8"
-      ulimits:
-        - name: cpu
-          hard: 5
-          soft: 3
-        - name: core
-          hard: 10
-          soft: 5
-      labels:
-        labelone: valueOne
-        labeltwo: valueTwo
-      portMappings:
-        - "80:80"
-      entryPoint:
-        - '/bin/sh'
-        - './entrypoint2.sh'
+  # - name: flecssv-dopts4
+  #   type: dockerOptions
+  #   version:
+  #     memory: 48
+  #     cpuShares: 2
+  #     privileged: false
+  #     volumes:
+  #     #  - "/host/path.2:/container/path:rw"
+  #     # - "/host/path:/container/path2:rw"
+  #       - "/host/path2:/container/path3:ro"
+  #       - "/host/path..2:/container/path4:rw"
+  #       - "/host/path..3:/container/path5:ro"
+  #       - "/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz:/container/path6:ro"
+  #     dnsServers:
+  #       - "127.0.0.1"
+  #       - "8.8.8.8"
+  #     dnsSearch:
+  #       - "127.0.0.1"
+  #       - "8.8.8.8"
+  #     ulimits:
+  #       - name: cpu
+  #         hard: 5
+  #         soft: 3
+  #       - name: core
+  #         hard: 10
+  #         soft: 5
+  #     labels:
+  #       labelone: valueOne
+  #       labeltwo: valueTwo
+  #     portMappings:
+  #       - "80:80"
+  #     entryPoint:
+  #       - '/bin/sh'
+  #       - './entrypoint2.sh'
        
  # - name: flecssv-dopts5
   #  type: dockerOptions
@@ -270,17 +185,17 @@ resources:
       #  options:
        #   max-size: 50m
   
-  - name: flsv-dopts6invalid
-    type: dockerOptions
-    version:
-      links:
-        - "plv2-manifest8redis_0_0_055d5014-109c-4c84-9bbe-3009a523:testenv"
+  # - name: flsv-dopts6invalid
+  #   type: dockerOptions
+  #   version:
+  #     links:
+  #       - "plv2-manifest8redis_0_0_055d5014-109c-4c84-9bbe-3009a523:testenv"
         
-  - name: flecssv-dopts7
-    type: dockerOptions
-    version:
-      memory: 100
-      cpuShares: 16
+  # - name: flecssv-dopts7
+  #   type: dockerOptions
+  #   version:
+  #     memory: 100
+  #     cpuShares: 16
       
   - name: flecssv-dopts8
     type: dockerOptions
@@ -288,22 +203,22 @@ resources:
       memory: 200
       cpuShares: 8
       
-  - name: flecssv-dopts9
-    type: dockerOptions
-    version:
-      memory: 300
-      cpuShares: 4
+#   - name: flecssv-dopts9
+#     type: dockerOptions
+#     version:
+#       memory: 300
+#       cpuShares: 4
         
-#PARAMS
+# #PARAMS
 
-  - name: flsv-params1
-    type: params
-    version:
-      params:
-        MONGO_API_URL: "localhost:28017"
-        #TEST: BETA
-        secure: k10l7WHxqxHzlsDC8QptqLAb60acxIBt850KCdDD0E92QRIh9DM4dI7ryl/bYFwMHgvCbtaBL9bW8hpVlDaRVaWQP1fHlvG8M2sdfWkQ9bb8/JqcHSnbP5f6SiaUg8bW/q96oMAPVxpbQhkt2TNJTU5ZajBU8hjzQkO1mlkg+LLlumUEbWUNQM9U5nBwkY8s9/nD0RfwI23MHgoq+P7eC2ud0OJaAIV/qrjYuyCn/OBkBtRSyXbkq6zWd9O4Fve1QBlD5ow/gY/qF8nlcpFpWuaIJUxm9A51Tm4JMPn3c3QXTRjKA14AKTrSDyTg62nyw+eHdnqsGtJVblJ2QNwXlg==
-        pipelinev2: fleming
+#   - name: flsv-params1
+#     type: params
+#     version:
+#       params:
+#         MONGO_API_URL: "localhost:28017"
+#         #TEST: BETA
+#         secure: k10l7WHxqxHzlsDC8QptqLAb60acxIBt850KCdDD0E92QRIh9DM4dI7ryl/bYFwMHgvCbtaBL9bW8hpVlDaRVaWQP1fHlvG8M2sdfWkQ9bb8/JqcHSnbP5f6SiaUg8bW/q96oMAPVxpbQhkt2TNJTU5ZajBU8hjzQkO1mlkg+LLlumUEbWUNQM9U5nBwkY8s9/nD0RfwI23MHgoq+P7eC2ud0OJaAIV/qrjYuyCn/OBkBtRSyXbkq6zWd9O4Fve1QBlD5ow/gY/qF8nlcpFpWuaIJUxm9A51Tm4JMPn3c3QXTRjKA14AKTrSDyTg62nyw+eHdnqsGtJVblJ2QNwXlg==
+#         pipelinev2: fleming
 
   # - name: flsv-params2
   #   type: params
@@ -316,23 +231,23 @@ resources:
   #       DB_PASSWORD: "aye0aye"
   #       ENVIRONMENT: "test-aws"
         
-  - name: flsv-params3
-    type: params
-    version:
-      params:
-        MONGO_API_URL: "betahost:75568"
-        #TEST: PROD
-        secure: iDMBU+V3tBQtjYcswEo1eqS5T0vjHNyFYreSV1GGE5Du2xfG5Vr75nhBtlkBxiLLfECRt2Xs4pr6gy4YyMg7zOd4/ilGgj2jqSRJ4uUjCIwtYl68m0hBa/EamPDLOwduK3vNVxu65h3fHfM8iwxr/OsGh6vhluHdGOaeThFzBwiArzBJU9Jl1UZgI1oxOpESMsIkaRgTXjf+t4Ges0u+HSdwUqVpL+gJF2AmSSV9TIFx3db4sW9JzfzbFAEUd1YX7dT2a4RY+ZE5HzkA4rj1DhCSYP8u7Y+8O45+oAlpoeM3X5YxQCJ1PcnuIpCBxj/yJeXSUicihWlBBioE431/6A==
-        pipelinev2: plv2
+  # - name: flsv-params3
+  #   type: params
+  #   version:
+  #     params:
+  #       MONGO_API_URL: "betahost:75568"
+  #       #TEST: PROD
+  #       secure: iDMBU+V3tBQtjYcswEo1eqS5T0vjHNyFYreSV1GGE5Du2xfG5Vr75nhBtlkBxiLLfECRt2Xs4pr6gy4YyMg7zOd4/ilGgj2jqSRJ4uUjCIwtYl68m0hBa/EamPDLOwduK3vNVxu65h3fHfM8iwxr/OsGh6vhluHdGOaeThFzBwiArzBJU9Jl1UZgI1oxOpESMsIkaRgTXjf+t4Ges0u+HSdwUqVpL+gJF2AmSSV9TIFx3db4sW9JzfzbFAEUd1YX7dT2a4RY+ZE5HzkA4rj1DhCSYP8u7Y+8O45+oAlpoeM3X5YxQCJ1PcnuIpCBxj/yJeXSUicihWlBBioE431/6A==
+  #       pipelinev2: plv2
         
-  - name: flsv-params4
-    type: params
-    version:
-      params:
-        MONGO_API_URL: "prodhost:86755"
-        #TEST: PARAM
-        secure: uTBobzhc4kqikvxYRVeZ7h71vSYGRinEnEWFGEnVWjZ05TvXrWjbfBD02vTXdahvuZvNCgioH4dZQeQV9uhT5fJ6hEZ+MRjuxAvWKkq7obA1ZCbXJxsLexgFyHjlPcJbUrAFBzj2MFIHOZrYwWdkokRri75GhbQQBJaZyw1DHfu+IgZ/gRhYnxv5E7HH89DTDtVTfKfesJvIGGTiOWinTgf16taEl4sRQGXR5vh+0Vh0kexkyeIKcbDDG5E6XKYbhQmjOUwsEybLhtoXLVFnDNrJPthpiktq2pzGrH8KIY+ELzx4l3AJxbAwr+hHbeiTTxkrC+5bCiMVmqzk5XdR4g==
-        pipelinev2: v2
+  # - name: flsv-params4
+  #   type: params
+  #   version:
+  #     params:
+  #       MONGO_API_URL: "prodhost:86755"
+  #       #TEST: PARAM
+  #       secure: uTBobzhc4kqikvxYRVeZ7h71vSYGRinEnEWFGEnVWjZ05TvXrWjbfBD02vTXdahvuZvNCgioH4dZQeQV9uhT5fJ6hEZ+MRjuxAvWKkq7obA1ZCbXJxsLexgFyHjlPcJbUrAFBzj2MFIHOZrYwWdkokRri75GhbQQBJaZyw1DHfu+IgZ/gRhYnxv5E7HH89DTDtVTfKfesJvIGGTiOWinTgf16taEl4sRQGXR5vh+0Vh0kexkyeIKcbDDG5E6XKYbhQmjOUwsEybLhtoXLVFnDNrJPthpiktq2pzGrH8KIY+ELzx4l3AJxbAwr+hHbeiTTxkrC+5bCiMVmqzk5XdR4g==
+  #       pipelinev2: v2
         #FOO: BAR
       #  secure: XwrVACQF9C4b2/rqV7wpHppo1PnZuSs3jdKKlFZ2hKABCRYnN4E4Hk4MA98EBlLOwUX4TzrbFKw0kGJUwdkgmy4FIcIitePlBLuarbCk5i0kc1kEMqhtDd7OVw4P/CNvY9ICrBTBkFhz8X/9oL6cDxLhpKzeO8RE/Flf+e01HfgvTCasph8jGBEV9ij3zYdbUTfakjUtJKQ87lGjCvxsxM8zUeLC/y/Bkxe4rJbO1dPPBK5Fd+K1msDrfuddR2lt8vIJnZRS9qmV2G5oT+g3kPzT+PFTVSEl89ZadqoZEmu3nu21tiJ27E2etTbQqevRdepd12OtZS+oaJOVlMU5FQ==
   
@@ -356,10 +271,10 @@ resources:
       
 #TIME
 
-  # - name: flsv-timeresource
-  #   type: time
-  #   seed:
-  #     interval: "8 8 8 8 *"
+  - name: flsv-timeresource
+    type: time
+    seed:
+      interval: "8 8 8 8 *"
         
 #GITREPO:
 
@@ -370,30 +285,16 @@ resources:
       sourceName: "ci-test2/sample-script"
       branch: "master"
       
-  - name: flsv-sample-script2
-    type: gitRepo
-    integration: "github"
-    pointer:
-      sourceName: "ci-test2/sample-scriptrunsh"
-      branch: "master"
+  # - name: flsv-sample-script2
+  #   type: gitRepo
+  #   integration: "github"
+  #   pointer:
+  #     sourceName: "ci-test2/sample-scriptrunsh"
+  #     branch: "master"
       
-  - name: flsv-sample-nod-notifiction
-    type: gitRepo
-    integration: "github"
-    pointer:
-      sourceName: "ci-test2/sample_nod_notifications"
-      branch: "master"
-      
- # - name: "flgrsv_sample-fleming_gr-rsync"
-  #  type: gitRepo
-   # integration: "github"
-    #pointer:
-     # sourceName: "ci-test2/sample-fleming"
-      #branch: "gitrepo"
-      
-  #- name: "flsrsv_sample-fleming_sr-rsync" # throws error in rSync job if we have syncRepo resource-> expected
-   # type: syncRepo
-    #integration: "github"
-    #pointer:
-     # sourceName: "ci-test2/sample-fleming"
-      #branch: "syncrepo"
+  # - name: flsv-sample-nod-notifiction
+  #   type: gitRepo
+  #   integration: "github"
+  #   pointer:
+  #     sourceName: "ci-test2/sample_nod_notifications"
+  #     branch: "master"
