@@ -407,9 +407,9 @@ resources:
      # sourceName: "ci-test2/sample-fleming"
       #branch: "gitrepo"
       
-  - name: "flsrsv_sample-fleming_sr-rsync" # throws error in rSync job if we have syncRepo resource-> expected
-    type: syncRepo
-    integration: "github"
-    pointer:
-      sourceName: "ci-test2/sample-fleming"
-      branch: "syncrepo"
+  # - name: "flsrsv_sample-fleming_sr-rsync" # throws error in rSync job if we have syncRepo resource-> expected
+  #   type: syncRepo
+  #   integration: "github"
+  #   pointer:
+  #     sourceName: "ci-test2/sample-fleming"
+  #     branch: "syncrepo"
