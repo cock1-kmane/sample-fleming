@@ -48,6 +48,11 @@ resources:
     seed:
       versionName: "1.2.123-beta"
       
+#INTEGRATION
+  - name: flsv-ecsint
+    type: integration
+    integration: plv2-ecs
+      
 #NOTIFICATIONS
       
   - name: flsv-slack
@@ -61,7 +66,7 @@ resources:
 
   - name: flsv-email
     type: notification
-    integration: "plv2-emailcock1"
+  #  integration: "plv2-emailcock1"
     pointer:
       method: email
       recipients: 
