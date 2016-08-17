@@ -53,7 +53,7 @@ resources:
     type: integration
     integration: plv2-ecs
     
-  - name: flsv-ecsint
+  - name: flsv-dockerint
     type: integration
     integration: plv2-docker
       
