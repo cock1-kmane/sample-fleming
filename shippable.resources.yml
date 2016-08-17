@@ -59,13 +59,14 @@ resources:
         - "#pipeline-public"
         - "@shiphitchcock1"
 
-  # - name: flsv-email
-  #   type: notification
-  #   integration: "plv2-emailcock1"
-  #   pointer:
-  #     recipients: 
-  #       - "varsha@shippable.com"
-  #       - "shiphitchcock1@gmail.com"
+  - name: flsv-email
+    type: notification
+    #integration: "plv2-emailcock1"
+    pointer:
+      method: email
+      recipients: 
+        - "varsha@shippable.com"
+        #- "shiphitchcock1@gmail.com"
         
 #IMAGES
         
