@@ -4,9 +4,9 @@ resources:
 
   - name: flsv-ddccluster
     type: cluster
-    #integration: plv2-ddc
+    integration: plv2-ddc
     pointer:
-      sourceName : "nothing" #we can anything because it is mandatory but ddc doesnot have clusters
+      #sourceName : "nothing" #we can anything because it is mandatory but ddc doesnot have clusters
 
   # - name: flsv-dclcluster
   #   type: cluster
