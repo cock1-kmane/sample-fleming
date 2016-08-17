@@ -83,9 +83,9 @@ resources:
     type: image
     integration: plv2-docker
     pointer:
-      sourceName: "shippabledocker/pipelinev2"
+      #sourceName: "shippabledocker/pipelinev2"
     seed:
-     # versionName: "deploy.1"
+      versionName: "deploy.1"
       
   - name: flsv-img2
     type: image
