@@ -213,11 +213,13 @@ jobs:
     steps:
       - IN: flsv-sample-script1
       - IN: flsv-man1
+      - IN: flsv-img1
+      - IN: flsv-dockerint
       - IN: flsv-tg6
       - TASK:
         - script: ls
         - script: ./IN/flsv-sample-script1/gitRepo/echo.sh
-        - script: sl
+       # - script: sl
         - script: sudo apt-get install tree
         - script: tree -F IN
         - script: cat IN/flsv-man1/integration.json
@@ -225,6 +227,7 @@ jobs:
       - script: echo 'testing1 failure'
       - script: echo 'failure runSh'
       - NOTIFY: flsv-slack
+      - NOTIFY: flsv-email
       
   - name: flsv-outrunsh
     type: runSh
