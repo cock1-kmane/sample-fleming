@@ -314,8 +314,8 @@ resources:
 
   - name: flsv-params1
     type: params
-    version:
-      params:
+   # version:
+    #  params:
         # MONGO_API_URL: "localhost:28017"
         # #TEST: BETA
         # secure: k10l7WHxqxHzlsDC8QptqLAb60acxIBt850KCdDD0E92QRIh9DM4dI7ryl/bYFwMHgvCbtaBL9bW8hpVlDaRVaWQP1fHlvG8M2sdfWkQ9bb8/JqcHSnbP5f6SiaUg8bW/q96oMAPVxpbQhkt2TNJTU5ZajBU8hjzQkO1mlkg+LLlumUEbWUNQM9U5nBwkY8s9/nD0RfwI23MHgoq+P7eC2ud0OJaAIV/qrjYuyCn/OBkBtRSyXbkq6zWd9O4Fve1QBlD5ow/gY/qF8nlcpFpWuaIJUxm9A51Tm4JMPn3c3QXTRjKA14AKTrSDyTg62nyw+eHdnqsGtJVblJ2QNwXlg==
