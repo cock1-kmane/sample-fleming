@@ -161,6 +161,12 @@ resources:
     seed:
       versionName: "latest"
       
+#LOAD BALANCER
+  - name: flsv-loadb1
+    type: loadBalancer
+    pointer:
+      sourceName: EC2Contai-EcsElast-17A64D22JHQLM
+      
 # DOCKER OPTIONS:
   
   - name: fltpsv-dopts1
@@ -385,7 +391,7 @@ resources:
     integration: "github"
     pointer:
       sourceName: "ci-test2/sample-scriptrunsh"
-     # branch: "master"
+      branch: "master"
       
   - name: flsv-sample-nod-notifiction
     type: gitRepo
