@@ -4,7 +4,7 @@ resources:
 
   - name: flsv-ddccluster
     type: cluster
-    integration: plv2-ddctest
+    integration: plv2-ddc
     pointer:
       sourceName : "nothing" #we can anything because it is mandatory but ddc doesnot have clusters
 
@@ -16,7 +16,7 @@ resources:
 
   - name: flsv-ecscluster
     type: cluster
-    integration: plv2-ecs
+    integration: 
     pointer:
       sourceName : "testCLtest"
       region: "us-west-2"
