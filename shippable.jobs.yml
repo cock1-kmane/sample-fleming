@@ -252,9 +252,9 @@ jobs:
       - IN: flsv-img1
       - IN: flsv-dockerint
       - IN: flsv-tg6
-      - TASK:
-        - script: ls
-        - script: ./IN/flsv-sample-script1/gitRepo/echo.sh
+      #- TASK:
+      #  - script: ls
+       # - script: ./IN/flsv-sample-script1/gitRepo/echo.sh
     on_failure:
       - script: echo 'testing1 failure'
       - script: echo 'failure runSh'
