@@ -2,17 +2,17 @@ jobs:
 
 #RELEASE
 
-  # - name: flsv-release
-  #   type: release
-  #   steps:
-  #     - IN: flsv-version
-  #       versionName: testrelease
-  #     - TASK: managed
-  #       bump: beta
-  #     - IN: flsv-man1
-  #     - IN: flsv-tg6
-  #   flags:
-  #     - flsv-release
+  - name: flsv-release
+    type: release
+    steps:
+      - IN: flsv-version
+        versionName: testrelease
+      - TASK: managed
+        bump: beta
+      - IN: flsv-man1
+      - IN: flsv-tg6
+    flags:
+      - flsv-release
       
 #MANIFESTS
       
