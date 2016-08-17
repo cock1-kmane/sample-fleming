@@ -301,8 +301,8 @@ resources:
   - name: flecssv-dopts9
     type: dockerOptions
     version:
-   #   memory: 300
-  #    cpuShares: 4
+      memory:# 300
+    #  cpuShares: 4
         
 #PARAMS
 
