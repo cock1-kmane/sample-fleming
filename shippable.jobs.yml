@@ -5,7 +5,7 @@ jobs:
   - name: flsv-release
     type: release
     steps:
-      - IN: flsv-version
+      - IN: flsv-version2
       #  versionName: testrelease
       - TASK: managed
         bump: beta
