@@ -46,7 +46,7 @@ resources:
   - name: flsv-version
     type: version
     seed:
-      versionName: "1.2.123-beta"
+    #  versionName: "1.2.123-beta"
       
 #INTEGRATION
   - name: flsv-ecsint
