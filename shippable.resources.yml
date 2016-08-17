@@ -16,9 +16,9 @@ resources:
 
   - name: flsv-ecscluster
     type: cluster
-    integration: 
+    integration: plv2-ecs
     pointer:
-      sourceName : "testCLtest"
+      sourceName : 
       region: "us-west-2"
       
   # - name: flsv-gkecluster
