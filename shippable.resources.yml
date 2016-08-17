@@ -384,8 +384,8 @@ resources:
     type: gitRepo
     integration: "github"
     pointer:
-     # sourceName: "ci-test2/sample-scriptrunsh"
-      branch: "master"
+      sourceName: "ci-test2/sample-scriptrunsh"
+     # branch: "master"
       
   - name: flsv-sample-nod-notifiction
     type: gitRepo
