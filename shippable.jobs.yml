@@ -60,8 +60,7 @@ jobs:
     type: manifest
     steps:
       - IN: flsv-img5workingdir
-      - IN: flsv-tg50
-      - TASK: managed
+      - IN: flsv-tg5
   
   - name: flsv-man6redismftomf
     type: manifest
@@ -75,7 +74,6 @@ jobs:
     steps:
       - IN: flsv-img1
       - IN: flsv-dopts6invalid
-      - IN: flsv-tg70
       
   - name: flsv-man8
     type: manifest
