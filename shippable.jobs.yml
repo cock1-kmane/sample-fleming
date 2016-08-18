@@ -244,26 +244,26 @@ jobs:
       - NOTIFY: flsv-slack
       - NOTIFY: flsv-email
       
-  - name: flsv-inrunsh4
-    type: runSh
-    steps:
-      - IN: flsv-sample-script1
-    #  - IN: flsv-man1
-      - IN: flsv-img1
-      - IN: flsv-dockerint
-      - IN: flsv-tg6
-      - TASK:
-      #  - script: ls
-       # - script: ./IN/flsv-sample-script1/gitRepo/echo.sh
-    on_failure:
-      - script: echo 'testing1 failure'
-      - script: echo 'failure runSh'
-      - NOTIFY: flsv-slack
-      - NOTIFY: flsv-email
-    on_success:
-      - script: echo 'Success'
-      - NOTIFY: flsv-slack
-      - NOTIFY: flsv-email
+  # - name: flsv-inrunsh4
+  #   type: runSh
+  #   steps:
+  #     - IN: flsv-sample-script1
+  #   #  - IN: flsv-man1
+  #     - IN: flsv-img1
+  #     - IN: flsv-dockerint
+  #     - IN: flsv-tg6
+  #     - TASK:
+  #       - script: ls
+  #       - script: ./IN/flsv-sample-script1/gitRepo/echo.sh
+    # on_failure:
+    #   - script: echo 'testing1 failure'
+    #   - script: echo 'failure runSh'
+    #   - NOTIFY: flsv-slack
+    #   - NOTIFY: flsv-email
+    # on_success:
+    #   - script: echo 'Success'
+    #   - NOTIFY: flsv-slack
+    #   - NOTIFY: flsv-email
       
   - name: flsv-outrunsh
     type: runSh
