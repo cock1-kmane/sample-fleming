@@ -266,18 +266,18 @@ jobs:
     #   - NOTIFY: flsv-slack
     #   - NOTIFY: flsv-email
       
-  - name: flsv-outrunsh
-    type: runSh
-    steps:
-      - TASK:
+#  - name: flsv-outrunsh
+   # type: runSh
+  #  steps:
+   #   - TASK:
       #  - script: "mkdir -p /build/state/" # creating directory 
        # - script: "touch /build/state/flsv-img1.env" # touch will create new empty file with timestamp
         #- script: "echo 'Hello'"
        # - script: "echo 'versionName=latest' >>  /build/state/rs-img1.env" # this will be adding in the file mongo-image.env
         #- script: "echo 'anotherProperty=foo' >>  /build/state/rs-img1.env" # next line will be this in the file mongo-image.env
-        - script: ls # fail case to post version for OUT image when all above commands are commented. that means it is nt to able to create an env folder for that image so it cant post version
-      - OUT: flsv-img1
-      - IN: flsv-tg11
+      #  - script: ls # fail case to post version for OUT image when all above commands are commented. that means it is nt to able to create an env folder for that image so it cant post version
+     # - OUT: flsv-img1
+    #  - IN: flsv-tg11
     #  - IN: "2img-rs"
      # - IN: "redis-rs"
      # - OUT: "env-rs"
