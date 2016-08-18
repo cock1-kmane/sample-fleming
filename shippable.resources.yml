@@ -379,8 +379,8 @@ resources:
 
   - name: flsv-timeresource
     type: time
-   # seed:
-   #   interval: "2 2 2 * *"
+    seed:
+      interval: #"2 2 2 * *"
         
 #GITREPO:
 
