@@ -228,7 +228,7 @@ jobs:
     steps:
       - IN: flsv-sample-script1
       - IN: flsv-man1
-      - IN: flsv-email
+     # - IN: flsv-email
       - IN: flsv-img1
       - IN: flsv-dockerint
       - IN: flsv-tg6
