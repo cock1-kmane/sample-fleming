@@ -68,7 +68,7 @@ jobs:
     steps:
       - IN: flsv-img6redis
       - IN: flsv-man1
-        switch: off
+       # switch: off
       
   - name: flsv-man7invalid
     type: manifest
