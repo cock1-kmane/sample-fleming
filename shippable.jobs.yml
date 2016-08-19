@@ -2,7 +2,7 @@ jobs:
 
 #RELEASE
 
-  # - name: flsv-release
+  # - name: dep-release
   #   type: release
   #   steps:
   #     - IN: flsv-version2
@@ -16,195 +16,147 @@ jobs:
       
 #MANIFESTS
       
-  - name: flsv-man1
+  - name: dep-man1up
     type: manifest
     steps:
-      - IN: flsv-img5workingdir
-      #- IN: flsv-dockerint
-      # versionNumber: 100
-      - IN: flsv-tg1
+      - IN: dep-img1
+      - IN: dep-tg1
     on_start:
-      - NOTIFY: flsv-email
-      #- NOTIFY: en-slackcock1
+      - NOTIFY: dep-email
+      - NOTIFY: dep-slack
     on_success:
-      - NOTIFY: flsv-email
-      - NOTIFY: flsv-slack
-
+      - NOTIFY: dep-email
+      - NOTIFY: dep-slack
       
-  - name: flsv-man2multiimg
+  - name: dep-man2bg
     type: manifest
     steps:
-      - IN: flsv-img2
-      - IN: flsv-img5workingdir
-     # - IN: fltpsv-dopts2
-     # - IN: flecssv-dopts4
-      #  applyTo:
-        #  - flsv-img2
-      - IN: flsv-tg2
-      
-  # - name: flsv-man3env
-  #   type: manifest
-  #   steps:
-  #     - IN: flsv-img3env
-  #   # - IN: flsv-params1
-  #   # - IN: fl-params2
-  #     - IN: flsv-tg3
-      
-  # - name: flsv-man4entrypoint
-  #   type: manifest
-  #   steps:
-  #     - IN: flsv-img4entrypoint
-  #     - TASK: managed
-  #     - IN: flsv-tg4
-      
-  - name: flsv-man5driftking
-    type: manifest
-    steps:
-      - IN: flsv-img5workingdir
-      - IN: flsv-tg5
+      - IN: dep-img2
+      - IN: dep-tg2
+    # on_start:
+    #   - NOTIFY: dep-email
+    #   - NOTIFY: dep-slack
+    # on_success:
+    #   - NOTIFY: dep-email
+    #   - NOTIFY: dep-slack
   
-  - name: flsv-man6redismftomf
+  - name: dep-man3
     type: manifest
     steps:
-      - IN: flsv-img6redis
-      - IN: flsv-man1
-       # switch: off
+      - IN: dep-img3
+      - IN: dep-tg3
       
-  # - name: flsv-man7invalid
-  #   type: manifest
-  #   steps:
-  #     - IN: flsv-img1
-  #     - IN: flsv-dopts6invalid
-      
-  - name: flsv-man8
+  - name: dep-man4toman3
     type: manifest
     steps:
-      - IN: flsv-img9
-      - IN: flecssv-dopts7
-      - IN: flsv-params1
-      - IN: flsv-tg8
-      
-  - name: flsv-man9
-    type: manifest
-    steps:
-      - IN: flsv-img9
-      - IN: flsv-tg9
-      
-  # - name: flsv-man10deployall
-  #   type: manifest
-  #   steps:
-  #     - IN: flsv-img8
-  #     - IN: flsv-tg10
-      
-  - name: flsv-man11webhook
-    type: manifest
-    steps:
-      - IN: flsv-img10webhook
-      - IN: flsv-tg12
-      
-  - name: flsv-man12webhook
-    type: manifest
-    steps:
-      - IN: flsv-img1
-      - IN: flsv-tg12
+      - IN: dep-man3
 
 # DEPLOYMENTS 
 
-  # - name: flsv-ecsdeployup
-  #   type: deploy
-  #   steps:
-  #     - IN: flsv-man10deployall
-  #     #- IN: flsv-dopts6invalid
-  #     - IN: flsv-ecscluster
-  #     - TASK: managed
-  #       deployMethod: upgrade
-        
-  - name: flsv-ecsdeployup2
+  - name: dep-ecsdeployup
     type: deploy
     steps:
-      - IN: flsv-man1
-      - IN: flsv-ecscluster
+      - IN: dep-man1up
+      - IN: dep-ecscluster
+      - TASK: managed
+        deployMethod: upgrade
+        
+  - name: dep-ecsdeploybg
+    type: deploy
+    steps:
+      - IN: dep-man2bg
+      - IN: dep-ecscluster
+    on_start:
+      - NOTIFY: dep-email
+      - NOTIFY: dep-slack
+    on_success:
+      - NOTIFY: dep-email
+      - NOTIFY: dep-slack
+      
+  - name: dep-ecsdepupmftomf
+    type: deploy
+    steps:
+      - IN: dep-man4toman3
+      - IN: dep-ecscluster
+      - TASK: managed
+        deployMethod: upgrade
+    on_start:
+      - NOTIFY: dep-email
+      - NOTIFY: dep-slack
+    on_success:
+      - NOTIFY: dep-email
+      - NOTIFY: dep-slack
+        
+  - name: dep-ecsdeployupmultiimg
+    type: deploy
+    steps:
+      - IN: dep-man1up
+      - IN: dep-man3
+      - IN: dep-ecscluster
+      - TASK: managed
+        deployMethod: upgrade
+    on_start:
+      - NOTIFY: dep-email
+      - NOTIFY: dep-slack
+    on_success:
+      - NOTIFY: dep-email
+      - NOTIFY: dep-slack
+      
+  - name: dep-tpdeployup
+    type: deploy
+    steps:
+      - IN: dep-man1up
+      # - IN: flsv-params5
+      #   applyTo:
+      #     flsv-man8
+      - IN: dep-tripubcluster
       - TASK: managed
         deployMethod: upgrade
       
-  #- name: flsv-ecsdeploybg
-   # type: deploy
-    #steps:
-     # - IN: flsv-man4entrypoint
-      #- IN: flecssv-dopts4
-      #- IN: flsv-ecscluster
+  - name: dep-tpdeploybg
+    type: deploy
+    steps:
+      - IN: dep-man2bg
+        #switch: off
+      - IN: dep-tripubcluster
+    on_start:
+      - NOTIFY: dep-email
+      - NOTIFY: dep-slack
+    on_success:
+      - NOTIFY: dep-email
+      - NOTIFY: dep-slack
       
-  #- name: flsv-ecsdeployupmftomf
-   # type: deploy
-    #steps:
-     # - IN: flsv-man6redismftomf
-    #  - IN: flsv-ecscluster
-     # - TASK: managed
-       # deployMethod: upgrade
+  - name: dep-gkedeployup
+    type: deploy
+    steps:
+      - IN: dep-man1up
+      - IN: dep-gkecluster
+      - TASK: managed
+        deployMethod: upgrade
+      
+  - name: dep-gkedeploybg
+    type: deploy
+    steps:
+      - IN: dep-man2bg
+      - IN: dep-gkecluster
+    on_start:
+      - NOTIFY: dep-email
+      - NOTIFY: dep-slack
+    on_success:
+      - NOTIFY: dep-email
+      - NOTIFY: dep-slack
+      
+  - name: dep-dcldeploy
+    type: deploy
+    steps:
+      - IN: dep-man1up
+      - IN: dep-dclcluster
         
-  # - name: flsv-ecsdeploybginvalid
-  #   type: deploy
-  #   steps:
-  #     - IN: flsv-man5driftking
-  #     - IN: flsv-dopts6invalid
-  #     - IN: flsv-ecscluster
-     # - TASK: managed
-       # deployMethod: upgrade
-      
-#  - name: flsv-ecsdeployuppm6436
- #   type: deploy
-  #  steps:
-   #   - IN: flsv-man8
-    #  - IN: flsv-ecscluster
-     # - TASK: managed
-      #  deployMethod: upgrade
-      
-  # - name: fl-tpdeployup
-  #   type: deploy
-  #   steps:
-  #     - IN: flsv-man8
-  #     - IN: flsv-params5
-  #       applyTo:
-  #         flsv-man8
-  #     - IN: flecssv-dopts8
-  #     - IN: flsv-tripubcluster
-  #     - TASK: managed
-  #       deployMethod: upgrade
-      
-  # - name: flsv-tpdeploybg
-  #   type: deploy
-  #   steps:
-  #     - IN: flsv-man4entrypoint
-  #       switch: off
-      #- IN: flsv-tripubcluster
-      
- # - name: fl-gkedeployup
-  #  type: deploy
-   # steps:
-    #  - IN: fl-man10deployall
-      #- IN: flgke-dopts3
-     # - IN: fl-gkecluster
-      #- TASK: managed
-       # deployMethod: upgrade
-      
-  #- name: fl-gkedeploybg
-   # type: deploy
-    #steps:
-     # - IN: fl-man5driftking
-    #  - IN: flgke-dopts3
-     # - IN: fl-gkecluster
-      
- # - name: fl-dcldeploy
-  #  type: deploy
-   # steps:
-    #  - IN: fl-man10deployall
-     # - IN: fl-dclcluster
-        
-#  - name: fl-ddcdeploy
- #   type: deploy
-  #  steps:
-   #   - IN: fl-man10deployall
-    #  - IN: fl-ddccluster
+  - name: dep-ddcdeploy
+    type: deploy
+    steps:
+      - IN: dep-man1up
+      - IN: dep-ddccluster
       
 #runSh
   # - name: flsv-inrunsh
@@ -223,48 +175,27 @@ jobs:
   #       - script: cat IN/flsv-man1/integration.json
        # - script: export versionName=$(cat ./IN/fl-img1/version.json | jq -r '.version.versionName')
         
-  - name: flsv-inrunsh3
-    type: runSh
-    steps:
-      - IN: flsv-sample-script1
-      - IN: flsv-man1
-    #  - IN: flsv-email
-      - IN: flsv-img1
-      - IN: flsv-dockerint
-      - IN: flsv-tg6
-      - TASK:
-        - script: ls
-        - script: ./IN/flsv-sample-script1/gitRepo/echo.sh
-       # - script: sl
-        - script: sudo apt-get install tree
-        - script: tree -F IN
-        - script: cat IN/flsv-man1/integration.json
-    on_failure:
-      - script: echo 'testing1 failure'
-      - script: echo 'failure runSh'
-      - NOTIFY: flsv-slack
-      - NOTIFY: flsv-email
-      
-  # - name: flsv-inrunsh4
+  # - name: flsv-inrunsh3
   #   type: runSh
   #   steps:
   #     - IN: flsv-sample-script1
-  #   #  - IN: flsv-man1
+  #     - IN: flsv-man1
+  #   #  - IN: flsv-email
   #     - IN: flsv-img1
   #     - IN: flsv-dockerint
   #     - IN: flsv-tg6
   #     - TASK:
   #       - script: ls
   #       - script: ./IN/flsv-sample-script1/gitRepo/echo.sh
-    # on_failure:
-    #   - script: echo 'testing1 failure'
-    #   - script: echo 'failure runSh'
-    #   - NOTIFY: flsv-slack
-    #   - NOTIFY: flsv-email
-    # on_success:
-    #   - script: echo 'Success'
-    #   - NOTIFY: flsv-slack
-    #   - NOTIFY: flsv-email
+  #     # - script: sl
+  #       - script: sudo apt-get install tree
+  #       - script: tree -F IN
+  #       - script: cat IN/flsv-man1/integration.json
+  #   on_failure:
+  #     - script: echo 'testing1 failure'
+  #     - script: echo 'failure runSh'
+  #     - NOTIFY: flsv-slack
+  #     - NOTIFY: flsv-email
       
 #  - name: flsv-outrunsh
    # type: runSh
@@ -281,14 +212,6 @@ jobs:
     #  - IN: "2img-rs"
      # - IN: "redis-rs"
      # - OUT: "env-rs"
-        
-#  - name: flsv-runCI1
- #   type: runCI
-  #  steps:
-   #   - IN: flsv-sample-nod-notifiction
-    #  - TASK: managed
-     # - OUT: flsv-img9
-      #- IN: flsv-tg4
       
   #- name: flsv-runCI2
    # type: runCI
