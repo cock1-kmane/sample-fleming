@@ -70,11 +70,11 @@ jobs:
       - IN: flsv-man1
        # switch: off
       
-  - name: flsv-man7invalid
-    type: manifest
-    steps:
-      - IN: flsv-img1
-      - IN: flsv-dopts6invalid
+  # - name: flsv-man7invalid
+  #   type: manifest
+  #   steps:
+  #     - IN: flsv-img1
+  #     - IN: flsv-dopts6invalid
       
   - name: flsv-man8
     type: manifest
