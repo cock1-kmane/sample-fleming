@@ -10,7 +10,7 @@ jobs:
   - name: ecsman2-invalidimg
     type: manifest
     steps:
-      - IN: ecsimg4-tagdoesntexist
+      - IN: ecsimg2-tagdoesntexist
       - IN: ecs-tg2
       
   - name: ecsman3-invalid
