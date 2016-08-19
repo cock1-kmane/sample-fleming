@@ -3,3 +3,8 @@ triggers:
      type: trigger
      version:
        counter: 0
+       
+   - name: easyt-tg2
+     type: trigger
+     version:
+       counter: 0
