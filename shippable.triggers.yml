@@ -27,4 +27,4 @@ triggers:
    - name: ecs-tg6
      type: trigger
      version:
-       counter: 0
+       counter: 1
