@@ -134,6 +134,7 @@ resources:
       params:
         MONGO_API_URL: "localhost:28017"
         #TEST: BETA
+        secure: ctKG8GqNCQZb2igPfaie+wdHNY+q56b8sey1qIA8S551pBhVI9/g6sBo2QWyxQvAsFepKO+SUgc8wtFZlvX1O3pZLipe45RU/No8c+eN2YffUF6K3p1tUe39WSqVti1o/zBGbtpKR7i69suTGAJpr/1c2o4icJTaC3MdfMX/zhBjUOB9obL79kgDmXJZkS4oVBUEVIsMk3eoXQOTaDSrMFJXK1Yh4KGKH0/isHbznsCPJM8c2HlnzDba2NWcwwXP4G+7Wh5ebwipF39b6PPp/V4c9Tj97WT1Dny6er2AZy13HsGz1U441SNd0/hQt+hCsSSD16CX6vdtkZ8jyyQSDA== 
         pipelinev2: fleming
         
 #RELPICAS
