@@ -142,13 +142,13 @@ resources:
     seed:
       versionName: "deploy123"   
       
-  - name: flsv-img8
-    type: image
-    integration: plv2-docker
-    pointer:
-      sourceName: "shippabledocker/pipelinev2"
-    seed:
-      versionName: "deploy.2"
+  # - name: flsv-img8
+  #   type: image
+  #   integration: plv2-docker
+  #   pointer:
+  #     sourceName: "shippabledocker/pipelinev2"
+  #   seed:
+  #     versionName: "deploy.2"
       
   - name: flsv-img9
     type: image
