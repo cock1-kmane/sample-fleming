@@ -27,8 +27,8 @@ triggers:
    - name: flsv-tg6
      type: trigger
      version:
-       counter: 3
-       
+       counter: 4
+   
    - name: flsv-tg7
      type: trigger
      version:
