@@ -90,11 +90,11 @@ jobs:
       - IN: flsv-img9
       - IN: flsv-tg9
       
-  - name: flsv-man10deployall
-    type: manifest
-    steps:
-      - IN: flsv-img8
-      - IN: flsv-tg10
+  # - name: flsv-man10deployall
+  #   type: manifest
+  #   steps:
+  #     - IN: flsv-img8
+  #     - IN: flsv-tg10
       
   - name: flsv-man11webhook
     type: manifest
