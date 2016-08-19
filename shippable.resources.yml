@@ -58,9 +58,9 @@ resources:
     type: integration
     integration: plv2-ecs
     
-  # - name: flsv-dockerint
-  #   type: integration
-  #   integration: plv2-docker
+  - name: flsv-dockerint
+    type: integration
+    integration: plv2-docker
       
 #NOTIFICATIONS
       
