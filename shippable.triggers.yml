@@ -23,3 +23,8 @@ triggers:
      type: trigger
      version:
        counter: 0
+       
+   - name: dep-tg6
+     type: trigger
+     version:
+       counter: 0
