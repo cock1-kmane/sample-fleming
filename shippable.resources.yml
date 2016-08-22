@@ -87,9 +87,10 @@ resources:
     type: image
     integration: plv2-docker
     pointer:
-      sourceName: "shiphitchcock1/betaci_nod_limitless_pl"
+     # sourceName: "shiphitchcock1/betaci_nod_limitless_pl"
+      sourceName: "shippabledocker/pipelinev2"
     seed:
-      versionName: "deploy.5"
+      versionName: "deploy.3"
       
   - name: dep-img3
     type: image
