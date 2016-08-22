@@ -2,12 +2,12 @@ triggers:
    - name: dep-tg1
      type: trigger
      version:
-       counter: 0
+       counter: 1
        
    - name: dep-tg2
      type: trigger
      version:
-       counter: 0
+       counter: 1
        
    - name: dep-tg3
      type: trigger
