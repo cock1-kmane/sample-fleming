@@ -181,7 +181,7 @@ jobs:
       - IN: dep-man5
       - IN: dep-ddccluster
       
-  - name: dep-ecsdeployup
+  - name: dep-ecsdeployupmultiimg
     type: deploy
     steps:
       - IN: dep-man5multiimg
@@ -189,7 +189,7 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
         
-  - name: dep-ecsdeploybg
+  - name: dep-ecsdeploybgmultiimg
     type: deploy
     steps:
       - IN: dep-man5multiimg
@@ -201,7 +201,7 @@ jobs:
       - NOTIFY: dep-email
       - NOTIFY: dep-slack
       
-  - name: dep-tpdeployup
+  - name: dep-tpdeployupmultiimg
     type: deploy
     steps:
       - IN: dep-man5multiimg
@@ -212,7 +212,7 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
       
-  - name: dep-tpdeploybg
+  - name: dep-tpdeploybgmultiimg
     type: deploy
     steps:
       - IN: dep-man5multiimg
@@ -225,7 +225,7 @@ jobs:
       - NOTIFY: dep-email
       - NOTIFY: dep-slack
       
-  - name: dep-gkedeployup
+  - name: dep-gkedeployupmultiimg
     type: deploy
     steps:
       - IN: dep-man5multiimg
@@ -233,7 +233,7 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
       
-  - name: dep-gkedeploybg
+  - name: dep-gkedeploybgmultiimg
     type: deploy
     steps:
       - IN: dep-man5multiimg
@@ -245,13 +245,13 @@ jobs:
       - NOTIFY: dep-email
       - NOTIFY: dep-slack
       
-  - name: dep-dcldeploy
+  - name: dep-dcldeploymultiimg
     type: deploy
     steps:
       - IN: dep-man5multiimg
       - IN: dep-dclcluster
         
-  - name: dep-ddcdeploy
+  - name: dep-ddcdeploymultiimg
     type: deploy
     steps:
       - IN: dep-man5multiimg
