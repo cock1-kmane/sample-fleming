@@ -2,17 +2,17 @@ jobs:
 
 #RELEASE
 
-  - name: dep-release
-    type: release
-    steps:
-      - IN: dep-version
-      #  versionName: testrelease
-      - TASK: managed
-        bump: beta
-      - IN: dep-man1
-      - IN: dep-tg6
-    flags:
-      - dep-release
+  # - name: dep-release
+  #   type: release
+  #   steps:
+  #     - IN: dep-version
+  #     #  versionName: testrelease
+  #     - TASK: managed
+  #       bump: beta
+  #     - IN: dep-man1up
+  #     - IN: dep-tg6
+  #   flags:
+  #     - dep-release
       
 #MANIFESTS
       
