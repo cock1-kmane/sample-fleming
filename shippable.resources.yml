@@ -49,9 +49,9 @@ resources:
   #     versionName: "11.2.123-beta"
       
 #INTEGRATION
-  # - name: dep-ecsint
-  #   type: integration
-  #   integration: plv2-ecs
+  - name: dep-ecsint
+    type: integration
+    integration: plv2-ecs
       
 #NOTIFICATIONS
       
