@@ -43,7 +43,7 @@ resources:
       
 #VERSIONS
 
-  # - name: flsv-version
+  # - name: dep-version
   #   type: version
   #   seed:
   #     versionName: "11.2.123-beta"
