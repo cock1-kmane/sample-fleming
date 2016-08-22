@@ -43,10 +43,10 @@ resources:
       
 #VERSIONS
 
-  # - name: dep-version
-  #   type: version
-  #   seed:
-  #     versionName: "11.2.123-beta"
+  - name: dep-version
+    type: version
+    seed:
+      versionName: "11.2.123-beta"
       
 #INTEGRATION
   - name: dep-ecsint
