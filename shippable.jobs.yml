@@ -58,7 +58,7 @@ jobs:
     steps:
       - IN: dep-man3
       
-  - name: dep-man4
+  - name: dep-man5
     type: manifest
     steps:
       - IN: dep-img3
