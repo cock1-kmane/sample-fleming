@@ -5,14 +5,14 @@ jobs:
   - name: dep-release
     type: release
     steps:
-      - IN: flsv-version2
+      - IN: dep-version
       #  versionName: testrelease
       - TASK: managed
         bump: beta
-      - IN: flsv-man1
-      - IN: flsv-tg6
+      - IN: dep-man1
+      - IN: dep-tg6
     flags:
-      - flsv-release
+      - dep-release
       
 #MANIFESTS
       
@@ -27,6 +27,8 @@ jobs:
     on_success:
       - NOTIFY: dep-email
       - NOTIFY: dep-slack
+    flags:
+      - dep-upgrade
       
   - name: dep-man2bg
     type: manifest
@@ -39,6 +41,8 @@ jobs:
     # on_success:
     #   - NOTIFY: dep-email
     #   - NOTIFY: dep-slack
+    flags:
+      - dep-bluegreen
   
   - name: dep-man3
     type: manifest
