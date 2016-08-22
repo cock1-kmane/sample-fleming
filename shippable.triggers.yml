@@ -7,7 +7,7 @@ triggers:
    - name: dep-tg2
      type: trigger
      version:
-       counter: 1
+       counter: 2
        
    - name: dep-tg3
      type: trigger
