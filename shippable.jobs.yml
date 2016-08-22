@@ -57,6 +57,12 @@ jobs:
     type: manifest
     steps:
       - IN: dep-man3
+      
+  - name: dep-man4
+    type: manifest
+    steps:
+      - IN: dep-img3
+      - IN: dep-tg4
 
 # DEPLOYMENTS 
 
@@ -164,6 +170,12 @@ jobs:
     type: deploy
     steps:
       - IN: dep-man1up
+      - IN: dep-ddccluster
+      
+  - name: dep-ddcdeploy2
+    type: deploy
+    steps:
+      - IN: dep-man5
       - IN: dep-ddccluster
       
 #runSh
