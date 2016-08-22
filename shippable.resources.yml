@@ -108,6 +108,14 @@ resources:
     seed:
       versionName: "nodeenv"
       
+  - name: dep-img5
+    type: image
+    integration: plv2-docker
+    pointer:
+      sourceName: "shiphitchcock1/betaci_nod_limitless_pl"
+    seed:
+      versionName: "deploy.5"
+      
 #LOAD BALANCER
   # - name: dep-loadb1
   #   type: loadBalancer
