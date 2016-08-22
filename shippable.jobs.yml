@@ -58,11 +58,14 @@ jobs:
     steps:
       - IN: dep-man3
       
-  - name: dep-man5
+  - name: dep-man5multiimg
     type: manifest
     steps:
       - IN: dep-img3
-      - IN: dep-tg4
+      - IN: dep-img5
+      - IN: dep-tg5
+    flags:
+      - manmultiimg
 
 # DEPLOYMENTS 
 
@@ -176,6 +179,82 @@ jobs:
     type: deploy
     steps:
       - IN: dep-man5
+      - IN: dep-ddccluster
+      
+  - name: dep-ecsdeployup
+    type: deploy
+    steps:
+      - IN: dep-man5multiimg
+      - IN: dep-ecscluster
+      - TASK: managed
+        deployMethod: upgrade
+        
+  - name: dep-ecsdeploybg
+    type: deploy
+    steps:
+      - IN: dep-man5multiimg
+      - IN: dep-ecscluster
+    on_start:
+      - NOTIFY: dep-email
+      - NOTIFY: dep-slack
+    on_success:
+      - NOTIFY: dep-email
+      - NOTIFY: dep-slack
+      
+  - name: dep-tpdeployup
+    type: deploy
+    steps:
+      - IN: dep-man5multiimg
+      # - IN: flsv-params5
+      #   applyTo:
+      #     flsv-man8
+      - IN: dep-tripubcluster
+      - TASK: managed
+        deployMethod: upgrade
+      
+  - name: dep-tpdeploybg
+    type: deploy
+    steps:
+      - IN: dep-man5multiimg
+        #switch: off
+      - IN: dep-tripubcluster
+    on_start:
+      - NOTIFY: dep-email
+      - NOTIFY: dep-slack
+    on_success:
+      - NOTIFY: dep-email
+      - NOTIFY: dep-slack
+      
+  - name: dep-gkedeployup
+    type: deploy
+    steps:
+      - IN: dep-man5multiimg
+      - IN: dep-gkecluster
+      - TASK: managed
+        deployMethod: upgrade
+      
+  - name: dep-gkedeploybg
+    type: deploy
+    steps:
+      - IN: dep-man5multiimg
+      - IN: dep-gkecluster
+    on_start:
+      - NOTIFY: dep-email
+      - NOTIFY: dep-slack
+    on_success:
+      - NOTIFY: dep-email
+      - NOTIFY: dep-slack
+      
+  - name: dep-dcldeploy
+    type: deploy
+    steps:
+      - IN: dep-man5multiimg
+      - IN: dep-dclcluster
+        
+  - name: dep-ddcdeploy
+    type: deploy
+    steps:
+      - IN: dep-man5multiimg
       - IN: dep-ddccluster
       
 #runSh
