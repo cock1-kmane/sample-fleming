@@ -17,10 +17,10 @@ jobs:
 #MANIFESTS
       
   - name: dep-man1up
-    type: manifests
+    type: manifest
     steps:
       - IN: dep-img1
-     # - IN: dep-params1
+      - IN: dep-params1
       #- IN: dep-dopts1
       - IN: dep-tg1
     on_start:
@@ -36,7 +36,7 @@ jobs:
     type: manifests
     steps:
       - IN: dep-img2
-     # - IN: dep-params1
+      - IN: dep-params1
       - IN: dep-tg2
     # on_start:
     #   - NOTIFY: dep-email
