@@ -17,7 +17,7 @@ jobs:
 #MANIFESTS
       
   - name: dep-man1up
-    type: manifest
+    type: manifests
     steps:
       - IN: dep-img1
      # - IN: dep-params1
@@ -33,7 +33,7 @@ jobs:
       - dep-upgrade
       
   - name: dep-man2bg
-    type: manifest
+    type: manifests
     steps:
       - IN: dep-img2
      # - IN: dep-params1
