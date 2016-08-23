@@ -168,7 +168,7 @@ resources:
 
   - name: dep-sample-script
     type: gitRepo
-    integration: "github"
+    integration: "shiphitchcock1-github"
     pointer:
       sourceName: "shiphitchcock1/sample-script"
       branch: "master"
