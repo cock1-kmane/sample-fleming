@@ -69,7 +69,7 @@ jobs:
   #   flags:
   #     - manmultiimg
 
-DEPLOYMENTS 
+#DEPLOYMENTS 
 
   - name: dep-ecsdeployup
     type: deploy
