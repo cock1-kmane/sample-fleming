@@ -38,12 +38,12 @@ jobs:
       - IN: dep-img2
       - IN: dep-params1
       - IN: dep-tg2
-    # on_start:
-    #   - NOTIFY: dep-email
-    #   - NOTIFY: dep-slack
-    # on_success:
-    #   - NOTIFY: dep-email
-    #   - NOTIFY: dep-slack
+    on_start:
+      - NOTIFY: dep-email
+      - NOTIFY: dep-slack
+    on_success:
+      - NOTIFY: dep-email
+      - NOTIFY: dep-slack
     flags:
       - dep-bluegreen
   
