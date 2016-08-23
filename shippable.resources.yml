@@ -22,7 +22,7 @@ resources:
       region: "us-west-2"
       
   - name: dep-ecsclusterlb
-    type: clusterloadBalanceTest
+    type: cluster
     integration: plv2-ecs
     pointer:
       sourceName : "loadBalanceTest"
