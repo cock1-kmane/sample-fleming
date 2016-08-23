@@ -57,6 +57,7 @@ jobs:
     type: manifest
     steps:
       - IN: dep-man3
+      - IN: dep-img5
       
   # - name: dep-man5multiimg
   #   type: manifest
