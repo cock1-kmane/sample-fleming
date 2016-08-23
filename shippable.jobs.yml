@@ -262,16 +262,16 @@ jobs:
   - name: dep-inrunsh
     type: runSh
     steps:
-      - IN: dep-sample-script1
+      - IN: dep-sample-script
         #versionName: "149dc247602ba40192703b5fe0a1bfae01bd8490"
       - IN: dep-tg4
       - TASK:
         - script: ls
-        - script: ./IN/dep-sample-script1/gitRepo/echo.sh
-        - script: sudo apt-get install tree
-        - script: tree -F IN
-        - script: cat IN/dep-man1up/integration.json
-        - script: export versionName=$(cat ./IN/fl-img1/version.json | jq -r '.version.versionName')
+        - script: ./IN/dep-sample-script/gitRepo/echo.sh
+        # - script: sudo apt-get install tree
+        # - script: tree -F IN
+        # - script: cat IN/dep-man1up/integration.json
+        # - script: export versionName=$(cat ./IN/fl-img1/version.json | jq -r '.version.versionName')
         
   # - name: flsv-inrunsh3
   #   type: runSh
