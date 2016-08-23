@@ -63,6 +63,7 @@ jobs:
     steps:
       - IN: dep-img3
       - IN: dep-img5
+      - IN: dep-dopts1
       - IN: dep-tg5
     flags:
       - manmultiimg
