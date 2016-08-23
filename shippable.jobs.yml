@@ -195,7 +195,7 @@ jobs:
     type: deploy
     steps:
       - IN: dep-man4toman3
-      - IN: dep-ecscluster
+      - IN: dep-ecsclusterlb
     on_start:
       - NOTIFY: dep-email
       - NOTIFY: dep-slack
