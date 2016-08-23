@@ -182,81 +182,81 @@ jobs:
       - IN: dep-man5
       - IN: dep-ddccluster
       
-  - name: dep-ecsdeployupmultiimg
-    type: deploy
-    steps:
-      - IN: dep-man5multiimg
-      - IN: dep-ecscluster
-      - TASK: managed
-        deployMethod: upgrade
+  # - name: dep-ecsdeployupmultiimg
+  #   type: deploy
+  #   steps:
+  #     - IN: dep-man5multiimg
+  #     - IN: dep-ecscluster
+  #     - TASK: managed
+  #       deployMethod: upgrade
         
-  - name: dep-ecsdeploybgmultiimg
-    type: deploy
-    steps:
-      - IN: dep-man5multiimg
-      - IN: dep-ecscluster
-    on_start:
-      - NOTIFY: dep-email
-      - NOTIFY: dep-slack
-    on_success:
-      - NOTIFY: dep-email
-      - NOTIFY: dep-slack
+  # - name: dep-ecsdeploybgmultiimg
+  #   type: deploy
+  #   steps:
+  #     - IN: dep-man5multiimg
+  #     - IN: dep-ecscluster
+  #   on_start:
+  #     - NOTIFY: dep-email
+  #     - NOTIFY: dep-slack
+  #   on_success:
+  #     - NOTIFY: dep-email
+  #     - NOTIFY: dep-slack
       
-  - name: dep-tpdeployupmultiimg
-    type: deploy
-    steps:
-      - IN: dep-man5multiimg
-      # - IN: flsv-params5
-      #   applyTo:
-      #     flsv-man8
-      - IN: dep-tripubcluster
-      - TASK: managed
-        deployMethod: upgrade
+  # - name: dep-tpdeployupmultiimg
+  #   type: deploy
+  #   steps:
+  #     - IN: dep-man5multiimg
+  #     # - IN: flsv-params5
+  #     #   applyTo:
+  #     #     flsv-man8
+  #     - IN: dep-tripubcluster
+  #     - TASK: managed
+  #       deployMethod: upgrade
       
-  - name: dep-tpdeploybgmultiimg
-    type: deploy
-    steps:
-      - IN: dep-man5multiimg
-        #switch: off
-      - IN: dep-tripubcluster
-    on_start:
-      - NOTIFY: dep-email
-      - NOTIFY: dep-slack
-    on_success:
-      - NOTIFY: dep-email
-      - NOTIFY: dep-slack
+  # - name: dep-tpdeploybgmultiimg
+  #   type: deploy
+  #   steps:
+  #     - IN: dep-man5multiimg
+  #       #switch: off
+  #     - IN: dep-tripubcluster
+  #   on_start:
+  #     - NOTIFY: dep-email
+  #     - NOTIFY: dep-slack
+  #   on_success:
+  #     - NOTIFY: dep-email
+  #     - NOTIFY: dep-slack
       
-  - name: dep-gkedeployupmultiimg
-    type: deploy
-    steps:
-      - IN: dep-man5multiimg
-      - IN: dep-gkecluster
-      - TASK: managed
-        deployMethod: upgrade
+  # - name: dep-gkedeployupmultiimg
+  #   type: deploy
+  #   steps:
+  #     - IN: dep-man5multiimg
+  #     - IN: dep-gkecluster
+  #     - TASK: managed
+  #       deployMethod: upgrade
       
-  - name: dep-gkedeploybgmultiimg
-    type: deploy
-    steps:
-      - IN: dep-man5multiimg
-      - IN: dep-gkecluster
-    on_start:
-      - NOTIFY: dep-email
-      - NOTIFY: dep-slack
-    on_success:
-      - NOTIFY: dep-email
-      - NOTIFY: dep-slack
+  # - name: dep-gkedeploybgmultiimg
+  #   type: deploy
+  #   steps:
+  #     - IN: dep-man5multiimg
+  #     - IN: dep-gkecluster
+  #   on_start:
+  #     - NOTIFY: dep-email
+  #     - NOTIFY: dep-slack
+  #   on_success:
+  #     - NOTIFY: dep-email
+  #     - NOTIFY: dep-slack
       
-  - name: dep-dcldeploymultiimg
-    type: deploy
-    steps:
-      - IN: dep-man5multiimg
-      - IN: dep-dclcluster
+  # - name: dep-dcldeploymultiimg
+  #   type: deploy
+  #   steps:
+  #     - IN: dep-man5multiimg
+  #     - IN: dep-dclcluster
         
-  - name: dep-ddcdeploymultiimg
-    type: deploy
-    steps:
-      - IN: dep-man5multiimg
-      - IN: dep-ddccluster
+  # - name: dep-ddcdeploymultiimg
+  #   type: deploy
+  #   steps:
+  #     - IN: dep-man5multiimg
+  #     - IN: dep-ddccluster
       
 #runSh
   # - name: flsv-inrunsh
