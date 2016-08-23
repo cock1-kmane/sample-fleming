@@ -21,6 +21,13 @@ resources:
       sourceName : "testCL"
       region: "us-west-2"
       
+  - name: dep-ecsclusterlb
+    type: clusterloadBalanceTest
+    integration: plv2-ecs
+    pointer:
+      sourceName : "loadBalanceTest"
+      region: "us-east-1"
+      
   - name: dep-gkecluster
     type: cluster
     integration: plv2-gke
