@@ -22,7 +22,7 @@ triggers:
    - name: dep-tg5
      type: trigger
      version:
-       counter: 1
+       counter: 2
        
    - name: dep-tg6
      type: trigger
