@@ -17,7 +17,7 @@ triggers:
    - name: dep-tg4
      type: trigger
      version:
-       counter: 2
+       counter: 3
        
    - name: dep-tg5
      type: trigger
