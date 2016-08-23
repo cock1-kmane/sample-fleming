@@ -33,7 +33,7 @@ jobs:
       - dep-upgrade
       
   - name: dep-man2bg
-    type: manifests
+    type: manifest
     steps:
       - IN: dep-img2
       - IN: dep-params1
