@@ -90,19 +90,19 @@ jobs:
       - NOTIFY: dep-email
       - NOTIFY: dep-slack
       
-  - name: dep-ecsdepupmftomf
-    type: deploy
-    steps:
-      - IN: dep-man4toman3
-      - IN: dep-ecscluster
-      - TASK: managed
-        deployMethod: upgrade
-    on_start:
-      - NOTIFY: dep-email
-      - NOTIFY: dep-slack
-    on_success:
-      - NOTIFY: dep-email
-      - NOTIFY: dep-slack
+  # - name: dep-ecsdepupmftomf
+  #   type: deploy
+  #   steps:
+  #     - IN: dep-man4toman3
+  #     - IN: dep-ecscluster
+  #     - TASK: managed
+  #       deployMethod: upgrade
+  #   on_start:
+  #     - NOTIFY: dep-email
+  #     - NOTIFY: dep-slack
+  #   on_success:
+  #     - NOTIFY: dep-email
+  #     - NOTIFY: dep-slack
         
   # - name: dep-ecsdeployupmultiimg
   #   type: deploy
