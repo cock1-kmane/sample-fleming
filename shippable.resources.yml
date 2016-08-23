@@ -166,11 +166,11 @@ resources:
         
 #GITREPO:
 
-  - name: dep-sample-script
-    type: gitRepo
-    integration: "shiphitchcock1-github"
-    pointer:
-      sourceName: "shiphitchcock1/sample-script"
-      branch: "master"
+  # - name: dep-sample-script
+  #   type: gitRepo
+  #   integration: "shiphitchcock1-github"
+  #   pointer:
+  #     sourceName: "shiphitchcock1/sample-script"
+  #     branch: "master"
       
       
