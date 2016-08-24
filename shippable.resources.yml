@@ -82,7 +82,7 @@ resources:
         
 #IMAGES
         
-  - name: dep-img1
+  - name: dep-img2
     type: image
     integration: plv2-docker
     pointer:
@@ -90,7 +90,7 @@ resources:
     seed:
       versionName: "deploy.1"
       
-  - name: dep-img2
+  - name: dep-img1
     type: image
     integration: plv2-docker
     pointer:
