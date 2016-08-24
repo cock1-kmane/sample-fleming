@@ -124,7 +124,7 @@ jobs:
     type: deploy
     steps:
       - IN: dep-man1up
-        #versionNumber: 1898
+        versionNumber: 1898
       # - IN: flsv-params5
       #   applyTo:
       #     flsv-man8
@@ -136,7 +136,7 @@ jobs:
     type: deploy
     steps:
       - IN: dep-man2bg
-       # versionNumber: 1898
+        versionNumber: 1898
         #switch: off
       - IN: dep-tripubcluster
     on_start:
