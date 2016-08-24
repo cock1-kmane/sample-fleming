@@ -154,15 +154,15 @@ resources:
         pipelinev2: fleming
         
 #RELPICAS
-  - name: dep-scale2
+  # - name: dep-scale2
+  #   type: replicas
+  #   version:
+  #     count: 2
+
+  - name: dep-scale3
     type: replicas
     version:
-      count: 2
-
-  #- name: flsv-scale3
-   # type: replicas
-    #version:
-     # count: 3
+      count: 3
       
 #TIME
 
