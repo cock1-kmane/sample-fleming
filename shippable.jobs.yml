@@ -20,7 +20,7 @@ jobs:
     type: manifest
     steps:
       - IN: dep-img1
-     # - IN: dep-params1
+      - IN: dep-params1
       #- IN: dep-dopts1
       - IN: dep-tg1
     on_start:
@@ -36,7 +36,7 @@ jobs:
     type: manifest
     steps:
       - IN: dep-img2
-   #   - IN: dep-params1
+      - IN: dep-params1
       - IN: dep-tg2
     on_start:
       - NOTIFY: dep-email
@@ -124,7 +124,7 @@ jobs:
     type: deploy
     steps:
       - IN: dep-man1up
-        versionNumber: 1898
+        #versionNumber: 1898
       # - IN: flsv-params5
       #   applyTo:
       #     flsv-man8
@@ -136,7 +136,7 @@ jobs:
     type: deploy
     steps:
       - IN: dep-man2bg
-        versionNumber: 1898
+       # versionNumber: 1898
         #switch: off
       - IN: dep-tripubcluster
     on_start:
@@ -170,7 +170,7 @@ jobs:
     type: deploy
     steps:
       - IN: dep-man1up
-        versionNumber: 1898
+       # versionNumber: 1898
       - IN: dep-params1
       - IN: dep-dclcluster
         
@@ -178,7 +178,7 @@ jobs:
     type: deploy
     steps:
       - IN: dep-man1up
-        versionNumber: 1898
+        #versionNumber: 1898
       - IN: dep-ddccluster
       
   # - name: dep-ddcdeploy2
