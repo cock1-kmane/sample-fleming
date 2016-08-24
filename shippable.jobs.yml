@@ -130,6 +130,7 @@ jobs:
       # - IN: flsv-params5
       #   applyTo:
       #     flsv-man8
+      - IN: dep-scale1
       - IN: dep-tripubcluster
       - TASK: managed
         deployMethod: upgrade
@@ -138,6 +139,7 @@ jobs:
     type: deploy
     steps:
       - IN: dep-man2bg
+      - IN: dep-scale1
       #  versionNumber: 1898
         #switch: off
       - IN: dep-tripubcluster
@@ -172,6 +174,7 @@ jobs:
     type: deploy
     steps:
       - IN: dep-man1up
+      - IN: dep-scale1
        # versionNumber: 1898
       - IN: dep-params1
       - IN: dep-dclcluster
@@ -180,6 +183,7 @@ jobs:
     type: deploy
     steps:
       - IN: dep-man1up
+      - IN: dep-scale1
         #versionNumber: 1898
       - IN: dep-ddccluster
       
