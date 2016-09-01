@@ -193,81 +193,81 @@ jobs:
   #     - IN: dep-man5
   #     - IN: dep-ddccluster
       
-  - name: dep-ecsdeployupmftomf
-    type: deploy
-    steps:
-      - IN: dep-man4toman3
-      - IN: dep-ecscluster
-      - TASK: managed
-        deployMethod: upgrade
+  # - name: dep-ecsdeployupmftomf
+  #   type: deploy
+  #   steps:
+  #     - IN: dep-man4toman3
+  #     - IN: dep-ecscluster
+  #     - TASK: managed
+  #       deployMethod: upgrade
         
-  - name: dep-ecsdeploybgmftomf
-    type: deploy
-    steps:
-      - IN: dep-man4toman3
-      - IN: dep-ecsclusterlb
-    on_start:
-      - NOTIFY: dep-email
-      - NOTIFY: dep-slack
-    on_success:
-      - NOTIFY: dep-email
-      - NOTIFY: dep-slack
+  # - name: dep-ecsdeploybgmftomf
+  #   type: deploy
+  #   steps:
+  #     - IN: dep-man4toman3
+  #     - IN: dep-ecsclusterlb
+  #   on_start:
+  #     - NOTIFY: dep-email
+  #     - NOTIFY: dep-slack
+  #   on_success:
+  #     - NOTIFY: dep-email
+  #     - NOTIFY: dep-slack
       
-  - name: dep-tpdeployupmftomf
-    type: deploy
-    steps:
-      - IN: dep-man4toman3
-      # - IN: flsv-params5
-      #   applyTo:
-      #     flsv-man8
-      - IN: dep-tripubcluster
-      - TASK: managed
-        deployMethod: upgrade
+  # - name: dep-tpdeployupmftomf
+  #   type: deploy
+  #   steps:
+  #     - IN: dep-man4toman3
+  #     # - IN: flsv-params5
+  #     #   applyTo:
+  #     #     flsv-man8
+  #     - IN: dep-tripubcluster
+  #     - TASK: managed
+  #       deployMethod: upgrade
       
-  - name: dep-tpdeploybgmftomf
-    type: deploy
-    steps:
-      - IN: dep-man4toman3
-        #switch: off
-      - IN: dep-tripubcluster
-    on_start:
-      - NOTIFY: dep-email
-      - NOTIFY: dep-slack
-    on_success:
-      - NOTIFY: dep-email
-      - NOTIFY: dep-slack
+  # - name: dep-tpdeploybgmftomf
+  #   type: deploy
+  #   steps:
+  #     - IN: dep-man4toman3
+  #       #switch: off
+  #     - IN: dep-tripubcluster
+  #   on_start:
+  #     - NOTIFY: dep-email
+  #     - NOTIFY: dep-slack
+  #   on_success:
+  #     - NOTIFY: dep-email
+  #     - NOTIFY: dep-slack
       
-  - name: dep-gkedeploymftomf
-    type: deploy
-    steps:
-      - IN: dep-man4toman3
-      - IN: dep-gkecluster
-      - TASK: managed
-        deployMethod: upgrade
+  # - name: dep-gkedeploymftomf
+  #   type: deploy
+  #   steps:
+  #     - IN: dep-man4toman3
+  #     - IN: dep-gkecluster
+  #     - TASK: managed
+  #       deployMethod: upgrade
       
-  - name: dep-gkedeploybgmftomf
-    type: deploy
-    steps:
-      - IN: dep-man4toman3
-      - IN: dep-gkecluster
-    on_start:
-      - NOTIFY: dep-email
-      - NOTIFY: dep-slack
-    on_success:
-      - NOTIFY: dep-email
-      - NOTIFY: dep-slack
+  # - name: dep-gkedeploybgmftomf
+  #   type: deploy
+  #   steps:
+  #     - IN: dep-man4toman3
+  #     - IN: dep-gkecluster
+  #   on_start:
+  #     - NOTIFY: dep-email
+  #     - NOTIFY: dep-slack
+  #   on_success:
+  #     - NOTIFY: dep-email
+  #     - NOTIFY: dep-slack
       
-  - name: dep-dcldeploymftomf
-    type: deploy
-    steps:
-      - IN: dep-man4toman3
-      - IN: dep-dclcluster
+  # - name: dep-dcldeploymftomf
+  #   type: deploy
+  #   steps:
+  #     - IN: dep-man4toman3
+  #     - IN: dep-dclcluster
         
-  - name: dep-ddcdeploymftomf
-    type: deploy
-    steps:
-      - IN: dep-man4toman3
-      - IN: dep-ddccluster
+  # - name: dep-ddcdeploymftomf
+  #   type: deploy
+  #   steps:
+  #     - IN: dep-man4toman3
+  #     - IN: dep-ddccluster
       
 #runSh
   # - name: dep-inrunsh1
