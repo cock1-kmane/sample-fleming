@@ -13,9 +13,3 @@ jobs:
     steps:
       - IN: easyt-img1
       - IN: easyt-tg1
-      
-  - name: easyt-man3
-    type: manifest
-    steps:
-      - IN: easyt-img1
-      - IN: easyt-tg1
