@@ -179,13 +179,13 @@ jobs:
       #- IN: dep-params1
       - IN: dep-dclcluster
         
-  - name: dep-ddcdeploy
-    type: deploy
-    steps:
-      - IN: dep-man1up
-      - IN: dep-scale1
-        #versionNumber: 1898
-      - IN: dep-ddccluster
+  # - name: dep-ddcdeploy
+  #   type: deploy
+  #   steps:
+  #     - IN: dep-man1up
+  #     - IN: dep-scale1
+  #       #versionNumber: 1898
+  #     - IN: dep-ddccluster
       
   # - name: dep-ddcdeploy2
   #   type: deploy
