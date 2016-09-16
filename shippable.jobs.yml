@@ -98,17 +98,15 @@ jobs:
         - script: ls
         - script: ./IN/allpl-sample-script/gitRepo/echo.sh
     on_start:
-      - NOTIFY: allpl-slack
-      - NOTIFY: allpl-email
+      - NOTIFY: bbs2allpl-slack
+      - NOTIFY: bbs2allpl-email
     on_success:
-      - NOTIFY: allpl-slack
-      - NOTIFY: allpl-email
+      - NOTIFY: bbs2allpl-slack
+      - NOTIFY: bbs2allpl-email
       - script: echo 'infra test'
       - script: echo 'newtesting success'
     on_failure:
       - script: echo 'testing1 failure'
       - script: echo 'failure runSh'
-      - NOTIFY: allpl-slack
-      - NOTIFY: allpl-email
-      
-  
+      - NOTIFY: bbs2allpl-slack
+      - NOTIFY: bbs2allpl-email
