@@ -6,7 +6,7 @@ resources:
     type: cluster
     integration: plv2-ecs
     pointer:
-      sourceName : "testCL"
+      sourceName : "testCL12"
       region: "us-west-2"
   
       
