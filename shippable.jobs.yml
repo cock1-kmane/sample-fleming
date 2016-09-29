@@ -11,13 +11,13 @@ jobs:
 
 # DEPLOYMENTS 
 
-  - name: ecs-d2
+  - name: ecs-d3
     type: deploy
     steps:
       - IN: ecs-man1
       - IN: ecs-cluster
       - TASK: managed
-        deployMethod: upgrade
+       # deployMethod: upgrade
       
  
       
