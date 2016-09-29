@@ -11,7 +11,7 @@ jobs:
 
 # DEPLOYMENTS 
 
-  - name: ecs-d5
+  - name: ecs-d6
     type: deploy
     steps:
       - IN: ecs-man1
