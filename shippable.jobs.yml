@@ -11,7 +11,7 @@ jobs:
 
 # DEPLOYMENTS 
 
-  - name: ecs-deploy1up
+  - name: ecs-d1
     type: deploy
     steps:
       - IN: ecs-man1
