@@ -8,21 +8,9 @@ resources:
     pointer:
       sourceName : "testCL"
       region: "us-west-2"
+  
       
-  - name: ecsclu1-invalidint
-    type: cluster
-    integration: plv2-ecstest
-    pointer:
-      sourceName : "testCL"
-      region: "us-west-2"
-      
-  - name: ecsclu2-invalidclu
-    type: cluster
-    integration: plv2-ecs
-    pointer:
-      sourceName : "testbetacl"
-      region: "us-west-2"
-        
+ 
 #IMAGES
         
   - name: ecs-img1
@@ -32,43 +20,4 @@ resources:
       sourceName: "shippabledocker/pipelinev2"
     seed:
       versionName: "deploy.1"
-      
-  - name: ecsimg2-tagdoesntexist
-    type: image
-    integration: plv2-docker
-    pointer:
-      sourceName: "shiphitchcock1/betaci_nod_limitless_pl"
-    seed:
-      versionName: "nothing.5"
-      
-# DOCKER OPTIONS:
-  
-  - name: ecs-dopts1
-    type: dockerOptions
-    version:
-      memory: 128
-      #user: "driftking"
-      
-  - name: ecs-dopts2invalid
-    type: dockerOptions
-    version:
-      memory: 128
-      links:
-        - "testaws-invalid"
-        
-#PARAMS
 
-  - name: ecs-params1
-    type: params
-    version:
-      params:
-        MONGO_API_URL: "localhost:28017"
-        TEST: BETA
-        pipelinev2: fleming
-
-#REPLICAS
-      
-  - name: ecs-scale2
-    type: replicas
-    version:
-      count: 2
