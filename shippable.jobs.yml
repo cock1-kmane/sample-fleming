@@ -19,5 +19,14 @@ jobs:
       - TASK: managed
        # deployMethod: upgrade
       
- 
+  - name: test-runsh
+    type: runSh
+    steps:
+      #- IN: allpl-sample-script
+      - IN: test-time
+     # - IN: allpl-tg2
+      #- IN: test-time-1
+      - TASK:
+        - script: ls
+       # - script: ./IN/allpl-sample-script/gitRepo/echo.sh
       
