@@ -28,5 +28,6 @@ jobs:
       #- IN: test-time-1
       - TASK:
         - script: ls
+        - script: echo "test time"
        # - script: ./IN/allpl-sample-script/gitRepo/echo.sh
       
