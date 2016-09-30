@@ -20,4 +20,9 @@ resources:
       sourceName: "shippabledocker/pipelinev2"
     seed:
       versionName: "deploy.1"
+      
+  - name: test-time
+    type: time
+    seed:
+      interval: "*/5 * * * *"
 
