@@ -10,6 +10,13 @@ jobs:
       - IN: ecs-params1
       - IN: ecs-tg1
       
+  - name: ecs-man2
+    type: manifest
+    steps:
+      - IN: ecs-img3
+      - IN: ecs-dopts1
+      - IN: ecs-tg1
+      
  # - name: ecsman2-invalidimg
   #  type: manifest
    # steps:
@@ -29,6 +36,7 @@ jobs:
     type: deploy
     steps:
       - IN: ecs-man1
+      - IN: ecs-man2
       - IN: ecs-cluster
       - TASK: managed
         deployMethod: upgrade
