@@ -3,28 +3,3 @@ triggers:
      type: trigger
      version:
        counter: 1
-       
-   - name: ecs-tg2
-     type: trigger
-     version:
-       counter: 0
-       
-   - name: ecs-tg3
-     type: trigger
-     version:
-       counter: 0
-       
-   - name: ecs-tg4
-     type: trigger
-     version:
-       counter: 0
-       
-   - name: ecs-tg5
-     type: trigger
-     version:
-       counter: 0
-       
-   - name: ecs-tg6
-     type: trigger
-     version:
-       counter: 1
