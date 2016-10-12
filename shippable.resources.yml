@@ -58,13 +58,13 @@ resources:
         
 #PARAMS
 
-  #- name: ecs-params1
-   # type: params
-    #version:
-     # params:
-      #  MONGO_API_URL: "localhost:28017"
-       # TEST: BETA
-        #pipelinev2: fleming
+  - name: ecs-params1
+    type: params
+    version:
+      params:
+        MONGO_API_URL: "localhost:28017"
+        TEST: BETA
+        pipelinev2: fleming
 
 #REPLICAS
       
