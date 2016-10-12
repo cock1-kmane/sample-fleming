@@ -41,6 +41,15 @@ resources:
     seed:
       versionName: "deploy.2"
       
+  - name: ecs-img3
+    type: image
+    integration: plv2-docker
+    pointer:
+      sourceName: "shippabledocker/pipelinev2"
+    seed:
+      versionName: "deploy.3"
+  
+      
  # - name: ecsimg2-tagdoesntexist
   #  type: image
    # integration: plv2-docker
