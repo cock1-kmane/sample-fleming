@@ -7,7 +7,7 @@ jobs:
       - IN: ecs-img1
      # - IN: ecs-img2
       - IN: ecs-dopts1
-      - IN: ecs-params1
+     # - IN: ecs-params1
       - IN: ecs-tg1
       
  # - name: ecsman2-invalidimg
@@ -25,13 +25,19 @@ jobs:
 
 # DEPLOYMENTS 
 
-  - name: ecs-deploy1up
+  - name: BG-deploy
     type: deploy
     steps:
       - IN: ecs-man1
       - IN: ecs-cluster
       - TASK: managed
-        deployMethod: upgrade
+        deployMethod: replace
+        
+  - name: RP-deploy
+    type: deploy
+    steps:
+      - IN: ecs-man1
+      - IN: ecs-cluster
       
  # - name: ecs-deploy2bginvalidclu
   #  type: deploy
