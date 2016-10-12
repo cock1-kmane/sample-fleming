@@ -29,7 +29,6 @@ jobs:
     type: deploy
     steps:
       - IN: ecs-man1
-      - IN: ecs-man2
       - IN: ecs-cluster
       - TASK: managed
         deployMethod: upgrade
