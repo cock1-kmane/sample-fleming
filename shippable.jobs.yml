@@ -7,12 +7,12 @@ jobs:
       - IN: dcl-img1
      # - IN: dcl-img2
      # - IN: dcl-dopts1
-      - IN: dcl-params1
+    #  - IN: dcl-params1
       - IN: dcl-tg1
         
   - name: dcl-deploy1
     type: deploy
     steps:
       - IN: dcl-man1
-      - IN: dcl-dopts1
+ #     - IN: dcl-dopts1
       - IN: dcl-cluster
