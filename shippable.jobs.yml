@@ -8,7 +8,7 @@ jobs:
      # - IN: ecs-img2
      # - IN: ecs-dopts1
     #  - IN: ecs-params1
-      - IN: ecs-tg9
+      - IN: ecs-tg1
       
  # - name: ecsman2-invalidimg
   #  type: manifest
@@ -28,14 +28,14 @@ jobs:
   - name: BG-deploytest
     type: deploy
     steps:
-      - IN: ecs-man4
+      - IN: ecs-man3
       - IN: ecs-dopts1
       - IN: ecs-cluster      
         
   - name: RP-deploytest
     type: deploy
     steps:
-      - IN: ecs-man4
+      - IN: ecs-man3
       - IN: ecs-dopts1
       - IN: ecs-cluster
       - TASK: managed
