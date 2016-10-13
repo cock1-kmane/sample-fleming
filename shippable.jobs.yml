@@ -25,23 +25,23 @@ jobs:
 
 # DEPLOYMENTS 
 
-  - name: BG-deployCL
-    type: deploy
-    steps:
-      - IN: ecs-man3
-      - IN: ecs-dopts1
-      - IN: ecs-scale2
-      - IN: ecs-cluster      
+ # - name: BG-deployCL
+  #  type: deploy
+   # steps:
+    #  - IN: ecs-man3
+     # - IN: ecs-dopts1
+      #- IN: ecs-scale2
+      #- IN: ecs-cluster      
         
-  - name: RP-deployCL
-    type: deploy
-    steps:
-      - IN: ecs-man3
-      - IN: ecs-dopts1
-      - IN: ecs-scale2
-      - IN: ecs-cluster
-      - TASK: managed
-        deployMethod: replace
+ # - name: RP-deployCL
+  #  type: deploy
+   # steps:
+    #  - IN: ecs-man3
+     # - IN: ecs-dopts1
+      #- IN: ecs-scale2
+      #- IN: ecs-cluster
+      #- TASK: managed
+       # deployMethod: replace
       
  # - name: ecs-deploy2bginvalidclu
   #  type: deploy
