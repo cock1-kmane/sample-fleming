@@ -1,72 +1,18 @@
 jobs:
 #MANIFESTS
       
-  - name: ecs-man3
+  - name: dcl-man3
     type: manifest
     steps:
-      - IN: ecs-img1
-     # - IN: ecs-img2
-     # - IN: ecs-dopts1
-      - IN: ecs-params1
-      - IN: ecs-tg1
-      
- # - name: ecsman2-invalidimg
-  #  type: manifest
-   # steps:
-    #  - IN: ecsimg2-tagdoesntexist
-     # - IN: ecs-tg2
-      
- # - name: ecsman3-invalid
-  #  type: manifest
-   # steps:
-    #  - IN: ecs-img2
-     #   versionNumber: 369
-     # - IN: ecs-tg3
-
-# DEPLOYMENTS 
-
- # - name: BG-deployCL
-  #  type: deploy
-   # steps:
-    #  - IN: ecs-man3
-     # - IN: ecs-dopts1
-      #- IN: ecs-scale2
-      #- IN: ecs-cluster      
+      - IN: dcl-img1
+     # - IN: dcl-img2
+     # - IN: dcl-dopts1
+      - IN: dcl-params1
+      - IN: dcl-tg1
         
- # - name: RP-deployCL
-  #  type: deploy
-   # steps:
-    #  - IN: ecs-man3
-     # - IN: ecs-dopts1
-      #- IN: ecs-scale2
-      #- IN: ecs-cluster
-      #- TASK: managed
-       # deployMethod: replace
-      
- # - name: ecs-deploy2bginvalidclu
-  #  type: deploy
-   # steps:
-    #  - IN: ecs-man1
-     # - IN: ecsclu2-invalidclu
-      
- # - name: ecs-deploy3upinvalidimg
-  #  type: deploy
-   # steps:
-    #  - IN: ecsman2-invalidimg
-     # - IN: ecs-cluster
-      #- TASK: managed
-       # deployMethod: upgrade
-
- # - name: ecs-deploy4bgmani
-  #  type: deploy
-   # steps:
-    #  - IN: ecsman3-invalid
-     # - IN: ecs-cluster
-      
- # - name: ecs-deploy5upinvaliddopts
-  #  type: deploy
-    #steps:
-   #   - IN: ecs-man1
-     # - IN: ecs-dopts2invalid
-      #- IN: ecs-cluster
-      
+  - name: dcl-deploy
+    type: deploy
+    steps:
+      - IN: dcl-man1
+      - IN: dcl-dopts1
+      - IN: dcl-cluster
