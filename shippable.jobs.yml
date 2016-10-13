@@ -30,6 +30,7 @@ jobs:
     steps:
       - IN: ecs-man3
       - IN: ecs-dopts1
+      - IN: ecs-scale2
       - IN: ecs-cluster      
         
   - name: RP-deployt1
@@ -37,6 +38,7 @@ jobs:
     steps:
       - IN: ecs-man3
       - IN: ecs-dopts1
+      - IN: ecs-scale2
       - IN: ecs-cluster
       - TASK: managed
         deployMethod: replace
