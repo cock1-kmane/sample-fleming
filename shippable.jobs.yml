@@ -32,14 +32,14 @@ jobs:
 
 # DEPLOYMENTS 
 
-  - name: BG-deploy2
+  - name: BG-deploytest
     type: deploy
     steps:
       - IN: ecs-man4
       - IN: ecs-dopts1
       - IN: ecs-cluster      
         
-  - name: RP-deploy2
+  - name: RP-deploytest
     type: deploy
     steps:
       - IN: ecs-man4
