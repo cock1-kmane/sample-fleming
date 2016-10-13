@@ -2,30 +2,13 @@ resources:
 
 #CLUSTERS
 
-  - name: ecs-cluster
+  - name: dcl-cluster
     type: cluster
-    integration: plv2-ecs
+    integration: plv2-dcl
     pointer:
-      sourceName : "testCL"
-      region: "us-west-2"
-      
- # - name: ecsclu1-invalidint
- #   type: cluster
-  #  integration: plv2-ecstest
-   # pointer:
-    #  sourceName : "testCL"
-     # region: "us-west-2"
-      
-  #- name: ecsclu2-invalidclu
-   # type: cluster
-    #integration: plv2-ecs
-   # pointer:
-    #  sourceName : "testbetacl"
-     # region: "us-west-2"
-        
-#IMAGES
-        
-  - name: ecs-img1
+     sourceName : "cluster-dcl"
+     
+  - name: dcl-img1
     type: image
     integration: plv2-docker
     pointer:
@@ -33,7 +16,7 @@ resources:
     seed:
       versionName: "deploy.1"
       
-  - name: ecs-img2
+  - name: dcl-img2
     type: image
     integration: plv2-docker
     pointer:
@@ -41,7 +24,7 @@ resources:
     seed:
       versionName: "deploy.2"
       
-  - name: ecs-img3
+  - name: dcl-img3
     type: image
     integration: plv2-docker
     pointer:
@@ -60,13 +43,13 @@ resources:
       
 # DOCKER OPTIONS:
   
-  - name: ecs-dopts1
+  - name: dcl-dopts1
     type: dockerOptions
     version:
       memory: 100
       #user: "driftking"
       
-  - name: ecs-dopts2invalid
+  - name: dcl-dopts2invalid
     type: dockerOptions
     version:
       memory: 100
@@ -75,7 +58,7 @@ resources:
         
 #PARAMS
 
-  - name: ecs-params1
+  - name: dcl-params1
     type: params
     version:
       params:
@@ -85,7 +68,7 @@ resources:
 
 #REPLICAS
       
-  - name: ecs-scale2
+  - name: dcl-scale2
     type: replicas
     version:
-      count: 1
+      count: 2
