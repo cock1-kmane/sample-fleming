@@ -8,7 +8,7 @@ jobs:
      # - IN: ecs-img2
      # - IN: ecs-dopts1
     #  - IN: ecs-params1
-      - IN: ecs-tg090
+      - IN: ecs-tg1
       
  # - name: ecsman2-invalidimg
   #  type: manifest
