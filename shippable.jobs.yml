@@ -25,7 +25,7 @@ jobs:
 
 # DEPLOYMENTS 
 
-  - name: BG-deployt1
+  - name: BG-deployCL
     type: deploy
     steps:
       - IN: ecs-man3
@@ -33,7 +33,7 @@ jobs:
       - IN: ecs-scale2
       - IN: ecs-cluster      
         
-  - name: RP-deployt1
+  - name: RP-deployCL
     type: deploy
     steps:
       - IN: ecs-man3
