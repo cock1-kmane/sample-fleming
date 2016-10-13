@@ -25,19 +25,19 @@ jobs:
 
 # DEPLOYMENTS 
 
-  - name: BG-deploy
+  - name: BG-deploy1
+    type: deploy
+    steps:
+      - IN: ecs-man1
+      - IN: ecs-cluster      
+        
+  - name: RP-deploy1
     type: deploy
     steps:
       - IN: ecs-man1
       - IN: ecs-cluster
       - TASK: managed
         deployMethod: replace
-        
-  - name: RP-deploy
-    type: deploy
-    steps:
-      - IN: ecs-man1
-      - IN: ecs-cluster
       
  # - name: ecs-deploy2bginvalidclu
   #  type: deploy
