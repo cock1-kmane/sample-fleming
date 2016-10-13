@@ -8,14 +8,7 @@ jobs:
      # - IN: ecs-img2
      # - IN: ecs-dopts1
     #  - IN: ecs-params1
-      - IN: ecs-tg1
-      
-  - name: ecs-man4
-    type: manifest
-    steps:
-      - IN: ecs-img3
-      - IN: ecs-man3
-     # - IN: ecs-dopts1
+      - IN: ecs-tg9
       
  # - name: ecsman2-invalidimg
   #  type: manifest
