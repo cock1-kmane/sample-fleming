@@ -7,7 +7,7 @@ jobs:
       - IN: ecs-img1
      # - IN: ecs-img2
      # - IN: ecs-dopts1
-    #  - IN: ecs-params1
+      - IN: ecs-params1
       - IN: ecs-tg1
       
  # - name: ecsman2-invalidimg
@@ -29,14 +29,14 @@ jobs:
     type: deploy
     steps:
       - IN: ecs-man3
-      - IN: ecs-dopts2invalid
+      - IN: ecs-dopts1
       - IN: ecs-cluster      
         
   - name: RP-deployt1
     type: deploy
     steps:
       - IN: ecs-man3
-      - IN: ecs-dopts2invalid
+      - IN: ecs-dopts1
       - IN: ecs-cluster
       - TASK: managed
         deployMethod: replace
