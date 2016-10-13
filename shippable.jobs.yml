@@ -29,14 +29,14 @@ jobs:
     type: deploy
     steps:
       - IN: ecs-man3
-      - IN: ecs-dopts1
+      - IN: ecs-dopts2invalid
       - IN: ecs-cluster      
         
   - name: RP-deployt1
     type: deploy
     steps:
       - IN: ecs-man3
-      - IN: ecs-dopts1
+      - IN: ecs-dopts2invalid
       - IN: ecs-cluster
       - TASK: managed
         deployMethod: replace
