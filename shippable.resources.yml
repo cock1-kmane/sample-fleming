@@ -80,7 +80,7 @@ resources:
     version:
       params:
         MONGO_API_URL: "localhost:28017"
-        TEST: rc
+        TEST: serverrc
         pipelinev2: fleming
 
 #REPLICAS
@@ -88,4 +88,4 @@ resources:
   - name: ecs-scale2
     type: replicas
     version:
-      count: 4
+      count: 1
