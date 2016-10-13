@@ -85,7 +85,7 @@ resources:
 
 #REPLICAS
       
- # - name: ecs-scale2
-  #  type: replicas
-   # version:
-    #  count: 2
+  - name: ecs-scale2
+    type: replicas
+    version:
+      count: 2
