@@ -89,3 +89,10 @@ resources:
     type: replicas
     version:
       count: 1
+    
+   - name: ecssample-script1
+    type: syncRepo
+    integration: "github"
+    pointer:
+      sourceName: "shipfleming/sample-script"
+      branch: "master"
