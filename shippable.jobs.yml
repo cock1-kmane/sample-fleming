@@ -1,7 +1,7 @@
 jobs:
 #MANIFESTS
       
-  - name: ecs-man1
+  - name: ecs-man3
     type: manifest
     steps:
       - IN: ecs-img1
@@ -10,11 +10,11 @@ jobs:
     #  - IN: ecs-params1
       - IN: ecs-tg1
       
-  - name: ecs-man2
+  - name: ecs-man4
     type: manifest
     steps:
       - IN: ecs-img3
-      - IN: ecs-man1
+      - IN: ecs-man3
       - IN: ecs-dopts1
       
  # - name: ecsman2-invalidimg
@@ -32,16 +32,16 @@ jobs:
 
 # DEPLOYMENTS 
 
-  - name: BG-deploy1
+  - name: BG-deploy2
     type: deploy
     steps:
-      - IN: ecs-man2
+      - IN: ecs-man4
       - IN: ecs-cluster      
         
-  - name: RP-deploy1
+  - name: RP-deploy2
     type: deploy
     steps:
-      - IN: ecs-man2
+      - IN: ecs-man4
       - IN: ecs-cluster
       - TASK: managed
         deployMethod: replace
