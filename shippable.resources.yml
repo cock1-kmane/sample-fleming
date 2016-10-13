@@ -66,12 +66,12 @@ resources:
       memory: 100
       #user: "driftking"
       
-  #- name: ecs-dopts2invalid
-   # type: dockerOptions
-    #version:
-     # memory: 128
-      #links:
-       # - "testaws-invalid"
+  - name: ecs-dopts2invalid
+    type: dockerOptions
+    version:
+      memory: 100
+      links:
+        - "testaws-invalid"
         
 #PARAMS
 
