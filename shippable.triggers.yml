@@ -1,5 +1,5 @@
 triggers:
-   - name: ecs-tg1
+   - name: dcl-tg1
      type: trigger
      version:
        counter: 3
