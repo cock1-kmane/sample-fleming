@@ -10,7 +10,7 @@ jobs:
       - IN: dcl-params1
       - IN: dcl-tg1
         
-  - name: dcl-deploy
+  - name: dcl-deploy1
     type: deploy
     steps:
       - IN: dcl-man1
