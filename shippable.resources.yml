@@ -88,4 +88,4 @@ resources:
   - name: ecs-scale2
     type: replicas
     version:
-      count: 2
+      count: 4
