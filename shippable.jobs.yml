@@ -1,7 +1,7 @@
 jobs:
 #MANIFESTS
       
-  - name: dcl-man3
+  - name: dcl-man1
     type: manifest
     steps:
       - IN: dcl-img1
