@@ -14,6 +14,7 @@ jobs:
     type: manifest
     steps:
       - IN: ecs-img3
+      - IN: ecs-man1
       - IN: ecs-dopts1
       
  # - name: ecsman2-invalidimg
