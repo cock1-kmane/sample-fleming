@@ -5,7 +5,7 @@ jobs:
     type: manifest
     steps:
       - IN: ecs-img1
-      - IN: ecs-img2
+     # - IN: ecs-img2
       - IN: ecs-dopts1
     #  - IN: ecs-params1
       - IN: ecs-tg1
