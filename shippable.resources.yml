@@ -26,11 +26,13 @@ resources:
       sourceName: "shippabledocker/pipelinev2"
     seed:
       versionName: "deploy.2"
+      
 #DOCKER OPTION
   - name: real-dopts1
     type: dockerOptions
     version:
       memory: 100
+      
 #PARAMS
 
   - name: real-params1
@@ -38,8 +40,9 @@ resources:
     version:
       params:
         MONGO_API_URL: "localhost:28017"
-        TEST: BETA
+        TEST: rc
         pipelinev2: fleming
+        
 #REPLICAS
 
   - name: real-scale1
