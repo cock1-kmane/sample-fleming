@@ -52,7 +52,7 @@ resources:
       
   - name: rele-slack
     type: notification
-    integration: "plv2-slackcock1"
+    integration: "plv2-slackplv2"
     pointer:
       recipients:
         - "#pipeline-pvt"
@@ -61,9 +61,9 @@ resources:
 
   - name: rele-email
     type: notification
-    integration: "plv2-emailcock1"
     pointer:
-      recipients: 
+      method: email
+      recipients:
         - "varsha@shippable.com"
         - "shiphitchcock1@gmail.com"
       
