@@ -3,7 +3,7 @@ jobs:
     type: manifest
     steps:
       - IN: lb-imglb
-     # - IN: lb-dopt1
+      - IN: lb-dopt1
       - IN: lb-tg1  
       
   - name: lb-ecsDeploy1
@@ -14,7 +14,7 @@ jobs:
       - IN: lb-loadb2
         applyTo:
           - manifest: lb-mani1 # it can only apply to one manifest
-            image: lb-imglb # it can only apply to one image in the manifest
-            port: 80
+            image: lb-img2 # it can only apply to one image in the manifest
+            port: 9090
       - TASK: managed
         deployMethod: upgrade
