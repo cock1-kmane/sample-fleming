@@ -43,7 +43,7 @@ jobs:
       - IN: real-ecscluster
     #  - IN: real-ecsdeploy4
       - TASK: managed
-        bump: alpha
+        bump: patch
         
   - name: real-release5
     type: release
