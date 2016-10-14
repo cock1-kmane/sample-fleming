@@ -40,7 +40,7 @@ resources:
     version:
       params:
         MONGO_API_URL: "localhost:28017"
-        TEST: rc
+        TEST: alpha
         pipelinev2: fleming
         
 #REPLICAS
