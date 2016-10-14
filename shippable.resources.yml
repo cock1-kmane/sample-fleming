@@ -88,3 +88,10 @@ resources:
     type: version
     seed:
       versionName: "11.2.3"
+      
+  - name: real-sample-script-rs
+    type: gitRepo
+    integration: "github"
+    pointer:
+      sourceName: "shiphitchcock1/sample-script"
+      branch: "master"
