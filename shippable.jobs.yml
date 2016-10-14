@@ -16,3 +16,4 @@ jobs:
           - manifest: lb-mani1 # it can only apply to one manifest
             image: lb-imglb # it can only apply to one image in the manifest
             port: 80
+      - OUT: lb-img2
