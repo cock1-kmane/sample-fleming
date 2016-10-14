@@ -45,7 +45,7 @@ jobs:
       - IN: real-ecscluster
     #  - IN: real-ecsdeploy4
       #- TASK: managed
-        bump: patch
+       # bump: patch
     on_start:
       - NOTIFY: rele-slack
       - NOTIFY: rele-email
