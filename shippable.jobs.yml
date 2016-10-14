@@ -34,9 +34,10 @@ jobs:
         
   - name: RL-rele
     type: release
-    #steps:
-    #  - IN: real-version4
-     # - OUT: real-img2
+    steps:
+      - IN: real-version4
+      - IN: real-img2
+        switch: off
       #- IN: real-dopts1
       #  versionName: test123
       #- IN: real-params1
@@ -44,8 +45,8 @@ jobs:
       #- IN: real-scale1
       #- IN: real-ecscluster
     #  - IN: real-ecsdeploy4
-      #- TASK: managed
-       # bump: patch
+      - TASK: managed
+        bump: patch
    # on_start:
     #  - NOTIFY: rele-slack
      # - NOTIFY: rele-email
