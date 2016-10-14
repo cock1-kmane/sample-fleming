@@ -3,29 +3,9 @@ triggers:
   - name: real-tg1
     type: trigger
     version:
-      counter: 8
+      counter: 0
       
   - name: real-tg2
     type: trigger
     version:
-      counter: 7
-      
-  - name: real-tg3
-    type: trigger
-    version:
-      counter: 6
-      
-  - name: real-tg4
-    type: trigger
-    version:
-      counter: 5
-      
-  - name: real-tg5
-    type: trigger
-    version:
-      counter: 5
-      
-  - name: realddc-tg1
-    type: trigger
-    version:
-      counter: 4
+      counter: 0
