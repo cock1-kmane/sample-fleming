@@ -50,6 +50,23 @@ resources:
     version:
       count: 1
       
+  - name: rele-slack
+    type: notification
+    integration: "plv2-slackcock1"
+    pointer:
+      recipients:
+        - "#pipeline-pvt"
+        - "#pipeline-public"
+        - "@shiphitchcock1"
+
+  - name: rele-email
+    type: notification
+    integration: "plv2-emailcock1"
+    pointer:
+      recipients: 
+        - "varsha@shippable.com"
+        - "shiphitchcock1@gmail.com"
+      
 #VERSIONS
 
   - name: real-version1
