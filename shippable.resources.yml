@@ -8,12 +8,6 @@ resources:
     pointer:
       sourceName : "loadBalanceTest"
       region: "us-east-1"
-      
-  - name: real-ddccluster
-    type: cluster
-    integration: plv2-ddc
-    pointer:
-      sourceName : "default"
 
 #IMAGES
         
