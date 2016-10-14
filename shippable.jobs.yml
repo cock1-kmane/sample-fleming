@@ -32,10 +32,15 @@ jobs:
       - TASK: managed
         bump: beta        
         
-  - name: real-release4
+  - name: RL-rele
     type: release
     steps:
       - IN: real-version4
+      - IN: real-img2
+      - IN: real-dopts1
+      - IN: real-params1
+      - IN: real-scale1
+      - IN: real-ecscluster
     #  - IN: real-ecsdeploy4
       - TASK: managed
         bump: alpha
