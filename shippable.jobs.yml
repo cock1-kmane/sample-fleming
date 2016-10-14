@@ -38,6 +38,7 @@ jobs:
       - IN: real-version4
       - IN: real-img2
       - IN: real-dopts1
+        versionName: test123
       - IN: real-params1
         verisonNumber: 100
       - IN: real-scale1
