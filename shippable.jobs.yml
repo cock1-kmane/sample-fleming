@@ -35,28 +35,28 @@ jobs:
   - name: RL-rele
     type: release
     steps:
-      - IN: real-version4
-      - OUT: real-img2
-      - IN: real-dopts1
+    #  - IN: real-version4
+     # - OUT: real-img2
+      #- IN: real-dopts1
       #  versionName: test123
-      - IN: real-params1
-        verisonNumber: 10t
-      - IN: real-scale1
-      - IN: real-ecscluster
+      #- IN: real-params1
+       # verisonNumber: 10t
+      #- IN: real-scale1
+      #- IN: real-ecscluster
     #  - IN: real-ecsdeploy4
       #- TASK: managed
        # bump: patch
-    on_start:
-      - NOTIFY: rele-slack
-      - NOTIFY: rele-email
-    on_failure:
-      - NOTIFY: rele-slack
-      - NOTIFY: rele-email
-      - script: echo 'mesasge'
-    on_success:
-      - NOTIFY: rele-email
-      - NOTIFY: rele-slack
-      - script: echo 'mesasge'
+   # on_start:
+    #  - NOTIFY: rele-slack
+     # - NOTIFY: rele-email
+   # on_failure:
+    #  - NOTIFY: rele-slack
+     # - NOTIFY: rele-email
+     # - script: echo 'mesasge'
+    #on_success:
+     # - NOTIFY: rele-email
+     # - NOTIFY: rele-slack
+      #- script: echo 'mesasge'
         
   - name: real-release5
     type: release
