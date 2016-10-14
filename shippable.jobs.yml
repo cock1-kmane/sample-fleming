@@ -6,7 +6,7 @@ jobs:
       - IN: lb-dopt1
       - IN: lb-tg1  
       
-  - name: lb-ecsDeploy1
+  - name: lb-ecsDeploy1bg
     type: deploy
     steps:
       - IN: lb-mani1
@@ -17,4 +17,4 @@ jobs:
             image: lb-imglb # it can only apply to one image in the manifest
             port: 80
       - TASK: managed
-        deployMethod: replace
+        deployMethod: bluegreen
