@@ -61,7 +61,7 @@ jobs:
     steps:
       - IN: real-sample-script-rs
        # versionName: testsha
-      - IN: rs-tg2
+      - IN: real-tg2
       - TASK:
         - script: ls
         - script: ./IN/sample-script-rs/gitRepo/echo.sh
