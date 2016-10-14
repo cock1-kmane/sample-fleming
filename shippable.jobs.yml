@@ -42,7 +42,7 @@ jobs:
         applyTo:
           - manifest: lb-mani2 # it can only apply to one manifest
             image: lb-imglb # it can only apply to one image in the manifest
-            port: "8082:80"
+            port: "8082"
       - TASK: managed
         deployMethod: replace
 
@@ -55,4 +55,4 @@ jobs:
         applyTo:
           - manifest: lb-mani3 # it can only apply to one manifest
             image: lb-imglb # it can only apply to one image in the manifest
-            port: "9090:9090"
+            port: "9090"
