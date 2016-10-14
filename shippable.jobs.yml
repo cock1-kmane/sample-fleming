@@ -59,6 +59,9 @@ jobs:
     type: release
     steps:
       - IN: real-version6
+      - IN: RL-rele
+      - IN: real-release5
+      - IN: real-release1
     #  - IN: real-man6
       - TASK: managed
         bump: rc
