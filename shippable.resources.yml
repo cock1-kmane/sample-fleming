@@ -115,3 +115,7 @@ resources:
     pointer:
       sourceName: "shiphitchcock1/sample-script"
       branch: "master"
+    buildOnCommit: true
+    buildOnPullRequest: true
+    buildOnTag: true
+    buildOnRelease: true
