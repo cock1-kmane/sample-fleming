@@ -29,6 +29,20 @@ resources:
   - name: lb-dopt1
     type: dockerOptions
     version:
-      memory: 200
+      memory: 100
       portMappings:
         - "80:80"
+        
+  - name: lb-dopt2
+    type: dockerOptions
+    version:
+      memory: 100
+      portMappings:
+        - "8082:80"
+        
+  - name: lb-dopt3
+    type: dockerOptions
+    version:
+      memory: 100
+      portMappings:
+        - "9090:9090"
