@@ -46,6 +46,15 @@ jobs:
     #  - IN: real-ecsdeploy4
       - TASK: managed
         bump: patch
+    on_start:
+      - NOTIFY: rele-slack
+      - NOTIFY: rele-email
+    on_failure:
+      - NOTIFY: rele-slack
+      - NOTIFY: rele-email
+    on_success:
+      - NOTIFY: rele-email
+      - NOTIFY: rele-slack
         
   - name: real-release5
     type: release
