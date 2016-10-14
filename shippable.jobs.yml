@@ -55,3 +55,13 @@ jobs:
     #  - IN: real-man6
       - TASK: managed
         bump: rc
+        
+  - name: real-inrunsh
+    type: runSh
+    steps:
+      - IN: real-sample-script-rs
+       # versionName: testsha
+      - IN: rs-tg2
+      - TASK:
+        - script: ls
+        - script: ./IN/sample-script-rs/gitRepo/echo.sh
