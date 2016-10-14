@@ -36,7 +36,7 @@ jobs:
     type: release
     steps:
       - IN: real-version4
-      - IN: real-ecsdeploy4
+    #  - IN: real-ecsdeploy4
       - TASK: managed
         bump: alpha
         
@@ -44,7 +44,7 @@ jobs:
     type: release
     steps:
       - IN: real-version1
-      - IN: real-ecsdeploy6release
+     # - IN: real-ecsdeploy6release
       - TASK: managed
         bump: major
         
@@ -52,6 +52,6 @@ jobs:
     type: release
     steps:
       - IN: real-version6
-      - IN: real-man6
+    #  - IN: real-man6
       - TASK: managed
         bump: rc
