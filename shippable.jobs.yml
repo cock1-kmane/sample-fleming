@@ -14,7 +14,7 @@ jobs:
       - IN: lb-loadb2
         applyTo:
           - manifest: lb-mani1 # it can only apply to one manifest
-           # image: lb-imglb # it can only apply to one image in the manifest
-            #port: 80
+            image: lb-imglb # it can only apply to one image in the manifest
+            port: 80
       - TASK: managed
         deployMethod: replace
