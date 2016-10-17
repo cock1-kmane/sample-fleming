@@ -10,5 +10,6 @@ jobs:
   - name: dcl-deploy1
     type: deploy
     steps:
-      - IN: dcl-man3      
+      - IN: dcl-man3   
+      - IN: dcl-dopts2invalid
       - IN: dcl-cluster
