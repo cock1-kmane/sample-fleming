@@ -4,7 +4,7 @@ jobs:
     type: manifest
     steps:
       - IN: dcl-img3
-      - IN: dcl-dopts1
+     # - IN: dcl-dopts1
       - IN: dcl-tg1
         
   - name: dcl-deploy1
