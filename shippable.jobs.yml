@@ -1,25 +1,14 @@
 jobs:
 #MANIFESTS
-      
-  - name: dcl-man1
+  - name: dcl-man3
     type: manifest
     steps:
-      - IN: dcl-img1
-      - IN: dcl-img2
-     # - IN: dcl-dopts1
-      #- IN: dcl-params1
-      - IN: dcl-tg1
-      
-  - name: dcl-man2
-    type: manifest
-    steps:
-      - IN: dcl-man1
       - IN: dcl-img3
       - IN: dcl-tg1
         
   - name: dcl-deploy1
     type: deploy
     steps:
-      - IN: dcl-man2
+      - IN: dcl-man3
       - IN: dcl-dopts1
       - IN: dcl-cluster
