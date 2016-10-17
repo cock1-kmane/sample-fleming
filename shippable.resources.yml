@@ -52,7 +52,7 @@ resources:
   - name: dcl-dopts2invalid
     type: dockerOptions
     version:
-      memory: 100
+      memory: trd
       links:
         - "testaws-invalid"
         
