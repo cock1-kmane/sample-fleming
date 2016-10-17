@@ -1,5 +1,5 @@
 triggers:
-   - name: dcl-tg1
+   - name: dcl-tg10
      type: trigger
      version:
        counter: 3
