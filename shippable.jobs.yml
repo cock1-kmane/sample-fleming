@@ -3,8 +3,8 @@ jobs:
   - name: dcl-man3
     type: manifest
     steps:
-      - IN: dcl-img30
-     # - IN: dcl-dopts1
+      - IN: dcl-img3
+      - IN: dcl-dopts1
       - IN: dcl-tg1
         
   - name: dcl-deploy1
