@@ -14,5 +14,5 @@ jobs:
     type: deploy
     steps:
       - IN: dcl-man1
-      - IN: dcl-dopts1
+    #  - IN: dcl-dopts1
       - IN: dcl-cluster
