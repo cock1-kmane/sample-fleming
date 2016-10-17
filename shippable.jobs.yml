@@ -12,4 +12,5 @@ jobs:
     steps:
       - IN: dcl-man3   
       - IN: dcl-dopts2invalid
+      - IN: dcl-scale2
       - IN: dcl-cluster
